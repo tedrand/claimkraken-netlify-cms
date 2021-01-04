@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: ClaimKraken - Patent News Now
-image: /img/products-full-width.jpg
+image: /img/surf-3-1378236.jpg
 heading: ClaimKraken - Patent News Now
 subheading: Learn about what's happening in the patent world now
 mainpitch:
