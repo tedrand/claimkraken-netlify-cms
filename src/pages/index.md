@@ -1,16 +1,17 @@
 ---
 templateKey: index-page
 title: ClaimKraken - Patent News Now
-image: /img/4a08f10f47e8f1cf167e37a0b26fd6d696955f26.jfif
+image: /img/products-full-width.jpg
 heading: ClaimKraken - Patent News Now
 subheading: Learn about what's happening in the patent world now
 mainpitch:
-  title: Why Kaldi
+  title: Why "ClaimKraken"?
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    Giles Rich, the former Chief Judge of the Federal Circuit, once famously
+    stated that “the name of the game is the claim.” Times have changed a lot
+    since then, but the notion is still largely correct. Understanding how the
+    Federal Circuit deals with modern patent claims is essential to
+    understanding the patent laws' current state.
 description: Just as claims are the heart of patent applications, ClaimKraken is
   the heart of your patent law news. Learn more about what's going on at the
   USPTO, the Federal Circuit, and beyond.
