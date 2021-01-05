@@ -1,19 +1,20 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /about
-title: About our values
+title: About ClaimKraken
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+## ClaimKraken: The New Patent Law Blog on the Block
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+Launched in January of 2021, ClaimKraken.com aims to provide readers with an informative and entertaining perspective into the world of patent law. The site provides a mix of informative articles and analysis of recent news and case law (with a particular focus on the United States Court of Appeals for the Federal Circuit (also referred to as the "Federal Circuit" or the "CAFC"). If you would like to contribute content to ClaimKraken.com, please send an email to [randtheodore@gmail.com](mailto:randtheodore@gmail.com).
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+## About the Author
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+The owner and sole proprietor of ClaimKraken.com, Theodore Rand, is currently a third-year law student at the University of New Hampshire Franklin Pierce School of Law. Theodore is a U.S. Registered Patent Agent (Registration Number - 77,446). He serves as the Chief Article Editor of the UNH Law Review and is a former Teaching Assistant for Legal Writing 1 and 2. He is also an incoming Associate at Morgan, Lewis & Bockius LLP, supporting the firm's Silicon Valley patent prosecution and litigation practice groups. 
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+Before law school, Theodore worked as a Software Developer and a Support Engineer at several technology companies and has a specialized focus in JavaScript and the AdTech industry. As a patent attorney, his goal is to facilitate innovation by being a helpful and non-intrusive resource to engineers and inventors who will listen attentively, learn about the technology, and provide legal assistance without forcing inventors to learn about the burdensome technical aspects of the law.
+
+In his free time, Theodore enjoys traveling with his fiancee, learning about new technologies, writing code (like the code for this website), and playing Magic the Gathering.
+
+<div style="text-align:center">
+<img src="https://www.claimkraken.com/img/mtg-headshot.png" alt="Theodore Rand headshot on Magic the Gathering card face."/>
+</div>
