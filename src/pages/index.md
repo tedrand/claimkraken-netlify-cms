@@ -6,12 +6,7 @@ heading: ClaimKraken - Patent News Now
 subheading: Learn about what's happening in the patent world now
 mainpitch:
   title: Why "ClaimKraken"?
-  description: >
-    Giles Rich, the former Chief Judge of the Federal Circuit, once famously
-    stated that “the name of the game is the claim.” Times have changed a lot
-    since then, but the notion is still largely correct. Understanding how the
-    Federal Circuit deals with modern patent claims is essential to
-    understanding the patent laws' current state.
+  description: Giles Rich, the former Chief Judge of the Federal Circuit, once famously stated that “the name of the game is the claim.” Times have changed a lot since then, but the notion is still largely correct. Understanding how the Federal Circuit deals with modern patent claims is essential to understanding the patent laws' current state.
 description: Just as claims are the heart of patent applications, ClaimKraken is
   the heart of your patent law news. Learn more about what's going on at the
   USPTO, the Federal Circuit, and beyond.
