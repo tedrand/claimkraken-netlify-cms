@@ -73,5 +73,24 @@ module.exports = {
       },
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: [
+            'IBM Plex Sans',
+            'IBM Plex Serif'
+          ]
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [
+          'G-L0VGJ2BZQZ'
+        ]
+      }
+    }
   ],
 }
