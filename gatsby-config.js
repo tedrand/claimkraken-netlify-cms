@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'ClaimKraken',
-    description:
-      'Patent law website built with Gatsby and Netlify.',
+    description: 'Patent law website built with Gatsby and Netlify.',
+    siteUrl: 'https://www.claimkraken.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -91,6 +91,15 @@ module.exports = {
           'G-L0VGJ2BZQZ'
         ]
       }
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.claimkraken.com',
+        sitemap: 'https://www.claimkraken.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    'gatsby-plugin-sitemap'
   ],
 }
