@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: "Enforcing Patents at the ITC: What is a 337 Investigation?"
 date: 2021-01-04T23:02:58.736Z
+author: Theodore Rand
 description: The International Trade Commission (ITC) is an administrative
   agency that controls the United States borders and can be used by patentees to
   enforce their patents to quickly obtain an injunction.
