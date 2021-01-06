@@ -93,6 +93,16 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-gdpr-cookies',
+      options: {
+        googleAnalytics: {
+          trackingId: 'G-L0VGJ2BZQZ',
+          anonymize: true
+        },
+        environments: ['production', 'development']
+      }
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.claimkraken.com',

@@ -1,4 +1,6 @@
 ---
+templateKey: privacy-policy-page
+path: /privacy-policy
 title: Privacy Policy
 ---
 Last Updated: January 6, 2021

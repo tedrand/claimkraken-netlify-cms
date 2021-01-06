@@ -1,13 +1,14 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import CookieConsent from 'react-cookie-consent'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
-import { withPrefix } from 'gatsby'
+// import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  const { title } = useSiteMetadata()
   return (
     <div>
       <Helmet>
@@ -33,6 +34,18 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <div>{children}</div>
       <Footer />
+      <CookieConsent
+        style={{
+          backgroundColor: "teal"
+        }}
+        location="bottom"
+        buttonText="Accept"
+        // declineButtonText="Decline"
+        cookieName="gatsby-gdpr-google-analytics">
+        This site uses cookies. Please check out our
+         <a href="/privacy-policy"> Privacy Policy </a> 
+        for more information.
+      </CookieConsent>
     </div>
   )
 }
