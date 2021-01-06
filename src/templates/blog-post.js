@@ -44,9 +44,9 @@ export const BlogPostTemplate = ({
 
             <br /><br />
             {/* <p>{description}</p> */}
-            <div>
+            {/* <div>
               <ShareButtons title={title} url={shareUrl} />
-            </div>
+            </div> */}
             <hr />
             <PostContent content={content} />
             {tags && tags.length ? (
