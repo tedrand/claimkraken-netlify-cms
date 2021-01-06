@@ -4,7 +4,6 @@ import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
-import { globalHistory } from "@reach/router"
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import ShareButtons from '../components/ShareButtons'
@@ -17,11 +16,11 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
+  slug,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
-  const pageUrl = `https://www.claimkraken.com${globalHistory.location.pathname}`
-  console.log(pageUrl);
+  const pageUrl = `https://www.claimkraken.com${slug}`
   let disqusConfig = {
     url: pageUrl,
     identifier: pageUrl,
@@ -70,12 +69,13 @@ BlogPostTemplate.propTypes = {
   date: PropTypes.string,
   description: PropTypes.string,
   title: PropTypes.string,
+  slug: PropTypes.string,
   helmet: PropTypes.object,
 }
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-
+  console.log(post.fields.slug)
   return (
     <Layout>
       <BlogPostTemplate
@@ -84,6 +84,7 @@ const BlogPost = ({ data }) => {
         author={post.frontmatter.author}
         date={post.frontmatter.date}
         description={post.frontmatter.description}
+        slug={post.fields.slug}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -95,9 +96,9 @@ const BlogPost = ({ data }) => {
             <meta property="og:type" content="article" />
             <meta property="og:title" content={`${post.frontmatter.title}`} />
             <meta property="og:description" content={`${post.frontmatter.description}`} />
-            <meta property="og:url" content={`https://www.claimkraken.com${globalHistory.location.pathname}`} />
+            <meta property="og:url" content={`https://www.claimkraken.com${post.fields.slug}`} />
             <meta property="og:site_name" content="ClaimKraken.com | Patents &amp; Patent Law" />
-            <meta property="og:image" content={`${post.frontmatter.featuredimage.childImageSharp.fixed.src}`} />
+            <meta property="og:image" content={`https://www.claimkraken.com${post.frontmatter.featuredimage.childImageSharp.fixed.src}`} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -120,6 +121,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
