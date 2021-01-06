@@ -16,18 +16,20 @@ export const BlogPostTemplate = ({
   author,
   id,
   description,
+  slug,
   tags,
   title,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
   const { siteUrl } = useSiteMetadata()
+  const pageUrl = `${siteUrl}/blog/${slug}`
   let disqusConfig = {
-    url: `${siteUrl + window.location.pathname}`,
+    url: pageUrl,
     identifier: id,
     title: title,
   }
-  const shareUrl = `${siteUrl + window.location.pathname}`
+  const shareUrl = pageUrl
   return (
     <section className="section">
       {helmet || ''}
@@ -75,6 +77,7 @@ BlogPostTemplate.propTypes = {
   date: PropTypes.string,
   id: PropTypes.string,
   description: PropTypes.string,
+  slug: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -91,6 +94,7 @@ const BlogPost = ({ data }) => {
         author={post.frontmatter.author}
         id={post.id}
         description={post.frontmatter.description}
+        slug={post.fields.slug}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -102,7 +106,7 @@ const BlogPost = ({ data }) => {
             <meta property="og:type" content="article" />
             <meta property="og:title" content={`${post.frontmatter.title}`} />
             <meta property="og:description" content={`${post.frontmatter.description}`} />
-            <meta property="og:url" content={`${siteUrl + window.location.pathname}`} />
+            <meta property="og:url" content={`${siteUrl}/blog/${post.fields.slug}`} />
             <meta property="og:site_name" content="ClaimKraken.com | Patents &amp; Patent Law" />
           </Helmet>
         }
@@ -126,6 +130,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
