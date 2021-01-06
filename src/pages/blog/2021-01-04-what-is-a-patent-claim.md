@@ -14,7 +14,7 @@ tags:
   - claims
   - learn
 ---
-## Background
+![](/img/patent-claim.jpg)
 
 35 U.S.C. § 112(b) states that "\[t]he specification shall conclude with one or more claims particularly pointing out and distinctly claiming the subject matter which the applicant regards as his invention." And this language is consistent with some of the earliest language of our patent laws.<sup>1</sup> Despite the trend of courts looking to the rest of the patent to clarify what the claims entail, the claims are still indisputably the most important part of the patent document. They are "the portion of the patent document that defines the patentee's rights."<sup>2</sup> Claims can be analogized to the "metes and bounds" or "fence posts" of a plot of real property (many refer to modern claim drafting as "peripheral" claiming). It is unnecessary to provide every single detail of a given "embodiment" that practices the claims. Rather, one must provide limitations in the claims that clarify (1) what the overall process, machine, article, or composition is, and (2) what distinct limitations thereof are new or "novel."
 
