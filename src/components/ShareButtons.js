@@ -1,39 +1,41 @@
 import React from 'react'
 
 import {
+  EmailShareButton,
+  EmailIcon,
   FacebookShareButton,
   FacebookIcon,
   LinkedinShareButton,
   LinkedinIcon,
-//   TwitterShareButton,
-//   TwitterIcon,
-  WhatsappShareButton,
-  WhatsappIcon,
+  // TwitterShareButton,
+  // TwitterIcon,
+  // WhatsappShareButton,
+  // WhatsappIcon,
   RedditShareButton,
   RedditIcon
 } from 'react-share'
 
-const ShareButtons = ({title, url}) => {
+const ShareButtons = ({ title, url }) => {
 
-    return(
-        <div>
-          <FacebookShareButton url={url} >
-                <FacebookIcon  size={40} round={true}/>
-         </FacebookShareButton>
+  return (
+    <div>
+      <FacebookShareButton url={url} >
+        <FacebookIcon size={40} round={true} />
+      </FacebookShareButton>
 
-          <LinkedinShareButton url={url} >
-            <LinkedinIcon  size={40} round={true}/>
-          </LinkedinShareButton>
+      <LinkedinShareButton url={url} >
+        <LinkedinIcon size={40} round={true} />
+      </LinkedinShareButton>
 
-          <RedditShareButton url={url} title={title} >
-            <RedditIcon  size={40} round={true} />
-          </RedditShareButton>
+      <RedditShareButton url={url} title={title} >
+        <RedditIcon size={40} round={true} />
+      </RedditShareButton>
 
-          <WhatsappShareButton url={url} title={title}>
-               <WhatsappIcon  size={40} round={true}/>
-           </WhatsappShareButton>
-        </div>
-      )
+      <EmailShareButton url={url} >
+        <EmailIcon size={40} round={true} />
+      </EmailShareButton>
+    </div>
+  )
 
 }
 export default ShareButtons

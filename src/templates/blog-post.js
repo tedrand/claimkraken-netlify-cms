@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
+import { FacebookProvider, Comments } from 'react-facebook'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import ShareButtons from '../components/ShareButtons'
@@ -21,11 +21,7 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
   const pageUrl = `https://www.claimkraken.com${slug}`
-  let disqusConfig = {
-    url: pageUrl,
-    identifier: pageUrl,
-    title: title,
-  }
+
   return (
     <section className="section">
       {helmet || ''}
@@ -40,6 +36,7 @@ export const BlogPostTemplate = ({
             <br/><br/>
             {/* <p>{description}</p> */}
             <ShareButtons title={title} url={pageUrl} />
+            <hr />
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -53,8 +50,9 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
-            <CommentCount config={disqusConfig} placeholder={'...'} />
-            <Disqus config={disqusConfig} />
+            <FacebookProvider appId="392511982027523">
+              <Comments href={`https://www.claimkraken.com${slug}`} />
+            </FacebookProvider>
           </div>
         </div>
       </div>
