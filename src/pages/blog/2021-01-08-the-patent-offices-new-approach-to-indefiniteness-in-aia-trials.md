@@ -23,7 +23,9 @@ On January 6, 2021, the United States Patent and Trademark Office (USPTO) issued
 
 ### The Standards
 
-In 2014, the Federal Circuit adopted the Office's approach to indefiniteness in *In re Packard*.<sup>3</sup>. Under this approach, the claims are sufficiently definite if "a person of ordinary skill in the relevant art would not consider the claim language unclear.<sup>4</sup>
+In 2014, the Federal Circuit adopted the Office's approach to indefiniteness in *In re Packard*.<sup>3</sup>. Under this approach, the claims are sufficiently definite if "a person of ordinary skill in the relevant art would not consider the claim language unclear."<sup>4</sup>
+
+In the same year as *In re Packard*, the Supreme Court held in *Nautilus, Inc. v. Biosig Instruments, Inc.*, that a claim is indefinite if it "fails to inform, *with reasonable certainty*, those skilled in the art about the scope of the invention."<sup>5</sup> This determination is made in light of the specification and the prosecution history.<sup>6</sup> Despite the determination by the Supreme Court that a different standard ought to be applied, the USPTO continued to apply the *Packard* standard. It reasoned that because of the BRI standard for claim interpretation and the "interactive process for resolving ambiguities," a different approach was warranted.<sup>7</sup>
 
 \[1] Covered Business Method Reviews (CBM Reviews) phased out in September of 2020.
 
@@ -32,3 +34,9 @@ In 2014, the Federal Circuit adopted the Office's approach to indefiniteness in 
 \[3] 751 F.3d 1307 (Fed. Cir. 2014).
 
 \[4] MPEP Section 2173.02(III)(B).
+
+\[5] 572 U.S. 898, 901 (2014).
+
+\[6] *Id.* 
+
+\[7] Ex parte McAward, Appeal 2015-006416, 2017 WL 3947829, at *4 (PTAB Aug. 25, 2017).
