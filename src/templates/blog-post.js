@@ -23,39 +23,34 @@ export const BlogPostTemplate = ({
   const pageUrl = `https://www.claimkraken.com${slug}`
 
   return (
-    <section className="section">
+    <section className="container">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>Date Published: {date}</p>
-            <small>Author: {author}</small>
-            <br/><br/>
-            {/* <p>{description}</p> */}
-            <ShareButtons title={title} url={pageUrl} />
-            <hr />
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-            <FacebookProvider appId="392511982027523">
-              <Comments href={`https://www.claimkraken.com${slug}`} />
-            </FacebookProvider>
-          </div>
+      <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+        {title}
+      </h1>
+      <p>Date Published: {date}</p>
+      <small>Author: {author}</small>
+      <br /><br />
+      {/* <p>{description}</p> */}
+      <ShareButtons title={title} url={pageUrl} />
+      <hr />
+      <PostContent className="post-content" content={content} />
+      {tags && tags.length ? (
+        <div style={{ marginTop: `4rem` }}>
+          <h4>Tags</h4>
+          <ul className="taglist">
+            {tags.map((tag) => (
+              <li key={tag + `tag`}>
+                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      ) : null}
+      <hr />
+      <FacebookProvider appId="392511982027523">
+        <Comments href={`https://www.claimkraken.com${slug}`} />
+      </FacebookProvider>
     </section>
   )
 }

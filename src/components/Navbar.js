@@ -23,60 +23,43 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
+            navBarActiveClass: 'is-active',
+          })
           : this.setState({
-              navBarActiveClass: '',
-            })
+            navBarActiveClass: '',
+          })
       }
     )
   }
 
   render() {
     return (
-      <nav
-        className="navbar is-dark"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              {/* <img src={logo} alt="Kaldi" style={{ width: '88px' }} /> */}
-              <h3>ClaimKraken</h3>
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-              onKeyDown={() => this.toggleHamburger()}
-              role="button"
-              tabIndex={0}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass} has-background-black`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item has-text-white-ter" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item has-text-white-ter" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item has-text-white-ter" to="/contact">
-                Contact
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered has-text-white-ter">
-              {/* ADD SEARCH HERE */}
-            </div>
+      <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#006D6F' }}>
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/">
+            ClaimKraken
+          </Link>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">About</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" aria-current="page" to="/blog">Blog</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" aria-current="page" to="/contact">Contact</Link>
+              </li>
+            </ul>
+            <form className="d-flex">
+              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button className="btn btn-outline-success" type="submit">Search</button>
+            </form>
           </div>
         </div>
       </nav>

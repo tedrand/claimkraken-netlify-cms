@@ -9,48 +9,43 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="row">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
+            <div className="card mb-2" key={post.id}>
+              <div className="row">
+                {post.frontmatter.featuredimage ? (
+                  <div className="col-md-4">
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: post.frontmatter.featuredimage,
+                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                      }}
+                    />
+                  </div>
+                ) : null}
+                <div className="col-md-8">
+                  <div className="card-body">
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="card-title"
                       to={post.fields.slug}
                     >
-                      {post.frontmatter.title}
+                      <h4>{post.frontmatter.title}</h4>
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
+                    <p className="card-text">
+                      <small className="text-muted">
+                        {post.frontmatter.date}
+                      </small><br />
+                      {post.frontmatter.description}
+                    </p>
+                    <p className="card-text">
+                      <Link className="btn btn-primary" to={post.fields.slug}>
+                        Keep Reading →
+                        </Link>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
       </div>
@@ -83,6 +78,7 @@ export default () => (
               }
               frontmatter {
                 title
+                description
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost

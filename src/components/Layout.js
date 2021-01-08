@@ -3,9 +3,8 @@ import { Helmet } from 'react-helmet'
 import CookieConsent from 'react-cookie-consent'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import './all.sass'
+import './all.css'
 import useSiteMetadata from './SiteMetadata'
-// import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children }) => {
   const { title } = useSiteMetadata()
@@ -14,16 +13,17 @@ const TemplateWrapper = ({ children }) => {
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossOrigin="anonymous"></link>
       </Helmet>
       <div className="jumbotron">
-        <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+        <h1
           style={{
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
           }}
         >{title}</h1>
-        <h2 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+        <h2 
           style={{
             color: 'white',
             lineHeight: '1',
@@ -32,7 +32,9 @@ const TemplateWrapper = ({ children }) => {
         >A Hub for Patent Law News</h2>
       </div>
       <Navbar />
-      <div>{children}</div>
+      <div className="container mt-3 mb-3">
+        {children}
+      </div>
       <Footer />
       <CookieConsent
         style={{
@@ -46,6 +48,7 @@ const TemplateWrapper = ({ children }) => {
          <a href="/privacy-policy"> Privacy Policy </a> 
         for more information.
       </CookieConsent>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossOrigin="anonymous"></script>
     </div>
   )
 }
