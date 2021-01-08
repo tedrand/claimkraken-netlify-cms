@@ -7,8 +7,8 @@ import {
   FacebookIcon,
   LinkedinShareButton,
   LinkedinIcon,
-  // TwitterShareButton,
-  // TwitterIcon,
+  TwitterShareButton,
+  TwitterIcon,
   // WhatsappShareButton,
   // WhatsappIcon,
   RedditShareButton,
@@ -19,6 +19,10 @@ const ShareButtons = ({ title, url }) => {
 
   return (
     <div>
+      <TwitterShareButton url={url} title={title}>
+        <TwitterIcon size={40} round={true} />
+      </TwitterShareButton>
+
       <FacebookShareButton url={url} >
         <FacebookIcon size={40} round={true} />
       </FacebookShareButton>
