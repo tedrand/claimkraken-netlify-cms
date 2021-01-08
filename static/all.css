@@ -1,0 +1,31 @@
+* {
+    font-family: IBM Plex Sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: IBM Plex Serif;
+}
+
+.jumbotron {
+    background-color: #292b2c;
+    padding: 1em;
+    text-align: center;
+}
+
+.post-content img {
+    max-width: 100%;
+}
+  
+.heading {
+    background-color: #f8f9fA;
+    padding: 1em 3em;
+}
+
+.btn-primary {
+    background-color: #006D6F !important;
+    border-color: #7a49a5;
+}
+
+.btn-primary:hover {
+    background-color: #005758 !important;
+}

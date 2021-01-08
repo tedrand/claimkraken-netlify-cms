@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'ClaimKraken',
@@ -55,6 +59,17 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          {
+            resolve: `gatsby-remark-embedder`,
+            options: {
+              customTransformers: [
+                // Your custom transformers
+              ],
+              services: {
+                // The service-specific options by the name of the service
+              },
+            },
+          },
         ],
       },
     },
@@ -93,6 +108,27 @@ module.exports = {
         },
         environments: ['production', 'development']
       }
+    },
+    {
+      resolve: `gatsby-source-twitter`,
+      options: {
+        credentials: {
+          consumer_key: process.env.TWITTER_CONSUMER_KEY,
+          consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+          bearer_token: process.env.TWITTER_BREARER_TOKEN,
+        },
+        queries: {
+          nameofthequery: {
+            endpoint: "statuses/user_timeline",
+            params: {
+              screen_name: "claimkraken",
+              include_rts: false,
+              exclude_replies: true,
+              tweet_mode: "extended",
+            },
+          },
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-robots-txt',

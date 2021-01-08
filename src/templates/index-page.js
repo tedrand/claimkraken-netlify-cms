@@ -19,13 +19,57 @@ export const IndexPageTemplate = ({
       <h3>{heading}</h3>
       <p>{description}</p>
     </div>
-    <h2>Latest Stories</h2>
-    <hr/>
-    <BlogRoll />
-    <div className="d-flex">
-      <Link className="btn btn-secondary flex-grow-1 flex-lg-grow-0" to="/blog">
-        Read more
-      </Link>
+    <div className="row">
+      <div className="col-md-8 mt-3">
+        <h2>Latest Stories</h2>
+        <hr />
+        <BlogRoll />
+        <div className="d-flex">
+          <Link className="btn btn-block btn-secondary flex-grow-1" to="/blog">
+            Read more
+          </Link>
+        </div>
+      </div>
+      <div className="col-md-4 mt-3">
+        <h2>About the Author</h2>
+        <div className="card mb-3" style={{
+          width: '100%',
+          backgroundColor: '#f8f9fA'
+        }}>
+          <img src="/img/headshot.png" 
+            className="card-img-top p-1" 
+            alt="headshot"
+            style={{
+              maxWidth: '40%',
+              display: 'block',
+              margin: 'auto',
+              borderRadius: '50%',
+              filter: 'grayscale(100%)'
+            }} 
+          />
+          <div className="card-body">
+            <h5 className="card-title">Theodore Rand</h5>
+            <p className="card-text">I'm a law student and USPTO Registered Patent Agent.</p>
+            <a href="/about" className="btn btn-primary">Learn more About the Site</a>
+          </div>
+        </div>
+        <a 
+          href="https://twitter.com/ClaimKraken?ref_src=twsrc%5Etfw" 
+          className="twitter-follow-button" 
+          data-size="large" 
+          data-width="100%"
+          data-show-count="true">
+            Follow @ClaimKraken
+        </a>
+        <a
+          className="twitter-timeline"
+          href="https://twitter.com/ClaimKraken?ref_src=twsrc%5Etfw"
+          data-theme="dark"
+          data-width="100%"
+          data-height="500">
+          Tweets by ClaimKraken
+      </a>
+      </div>
     </div>
   </div>
 )

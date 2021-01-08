@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet'
 import CookieConsent from 'react-cookie-consent'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import './all.css'
 import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
@@ -14,6 +13,7 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossOrigin="anonymous"></link>
+        <link href="/all.css" rel="stylesheet"/>
       </Helmet>
       <div className="jumbotron">
         <h1
@@ -49,6 +49,7 @@ const TemplateWrapper = ({ children }) => {
         for more information.
       </CookieConsent>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossOrigin="anonymous"></script>
+      <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
     </div>
   )
 }
