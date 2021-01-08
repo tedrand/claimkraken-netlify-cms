@@ -18,9 +18,3 @@ In his free time, Theodore enjoys traveling with his fiancee, learning about new
 <div style="text-align:center">
 <img src="https://www.claimkraken.com/img/mtg-headshot.png" alt="Theodore Rand headshot on Magic the Gathering card face."/>
 </div>
-
-<!--StartFragment-->
-
-<a class="twitter-timeline" href="https://twitter.com/claimkraken" data-aria-polite="assertive"> Tweets by @TwitterDev </a>
-
-<!--EndFragment-->
