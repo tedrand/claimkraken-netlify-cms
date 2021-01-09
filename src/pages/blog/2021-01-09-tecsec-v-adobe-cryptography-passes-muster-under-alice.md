@@ -8,6 +8,11 @@ description: In TecSec, the Federal Circuit took a closer look at the issue of
   USC Section 101.
 featuredpost: false
 featuredimage: /img/cryptography-1091255__340.jpg
+tags:
+  - patent
+  - software-patent
+  - 35-USC-101
+  - eligibility
 ---
 ![cryptography word cloud](/img/cryptography-1091255__340.jpg)
 
