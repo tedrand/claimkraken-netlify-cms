@@ -7,8 +7,10 @@ description: In TecSec, the Federal Circuit took a closer look at the issue of
   cryptography as applied to the subject matter eligibility exception under 35
   USC Section 101.
 featuredpost: false
-featuredimage: /img/download.jfif
+featuredimage: /img/cryptography-1091255__340.jpg
 ---
+![cryptography word cloud](/img/cryptography-1091255__340.jpg)
+
 **Link to Case:** [TecSec, Inc. v. Adobe Inc., No. CV-19-2192, slip op. (Fed. Cir. October 23, 2020)](http://www.cafc.uscourts.gov/sites/default/files/opinions-orders/19-2192.OPINION.10-23-2020_1674360.pdf)
 
 On Friday, October 23, 2020, the United States Court of Appeals for the Federal Circuit (CAFC) released their opinion for the latest round in the TecSec, Inc. v. Adobe Inc. saga. This time, the court addressed the eligibility of several of TecSec's "DCOM" patent claims. As the court noted, DCOM or Distributed Cryptographic Object Method is used to enhance systems' security for transmitting files in a data network. TecSec's patents focus on assigning a security level to documents according to a certain combination of access controls and encryption. Claim 1 of U.S. Patent No. 5,369,702 (the '702 patent) recites:
