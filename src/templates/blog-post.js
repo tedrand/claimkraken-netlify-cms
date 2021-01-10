@@ -23,34 +23,77 @@ export const BlogPostTemplate = ({
   const pageUrl = `https://www.claimkraken.com${slug}`
 
   return (
-    <section className="container">
-      {helmet || ''}
-      <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-        {title}
-      </h1>
-      <p>Date Published: {date}</p>
-      <small>Author: {author}</small>
-      <br /><br />
-      {/* <p>{description}</p> */}
-      <ShareButtons title={title} url={pageUrl} />
-      <hr />
-      <PostContent className="post-content" content={content} />
-      {tags && tags.length ? (
-        <div style={{ marginTop: `4rem` }}>
-          <h4>Tags</h4>
-          <ul className="taglist">
-            {tags.map((tag) => (
-              <li key={tag + `tag`}>
-                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-              </li>
-            ))}
-          </ul>
+    <section className="container row">
+      <div className="col-md-8 mt-3">
+        {helmet || ''}
+        <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+          {title}
+        </h1>
+        <p>Date Published: {date}</p>
+        <small>Author: {author}</small>
+        <br /><br />
+        {/* <p>{description}</p> */}
+        <ShareButtons title={title} url={pageUrl} />
+        <hr />
+        <PostContent className="post-content" content={content} />
+        {tags && tags.length ? (
+          <div style={{ marginTop: `4rem` }}>
+            <h4>Tags</h4>
+            <ul className="taglist">
+              {tags.map((tag) => (
+                <li key={tag + `tag`}>
+                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+        <hr />
+        <FacebookProvider appId="392511982027523">
+          <Comments href={`https://www.claimkraken.com${slug}`} />
+        </FacebookProvider>
+      </div>
+      <div className="col-md-4 mt-3">
+        <h2>About the Author</h2>
+        <div className="card mb-3" style={{
+          width: '100%',
+          backgroundColor: '#f8f9fA'
+        }}>
+          <img src="/img/headshot.png"
+            className="card-img-top p-1"
+            alt="headshot"
+            style={{
+              maxWidth: '40%',
+              display: 'block',
+              margin: 'auto',
+              borderRadius: '50%',
+              filter: 'grayscale(100%)'
+            }}
+          />
+          <div className="card-body">
+            <h5 className="card-title">Theodore Rand</h5>
+            <p className="card-text">I'm a law student and USPTO Registered Patent Agent.</p>
+            <a href="/about" className="btn btn-primary">Learn more About the Site</a>
+          </div>
         </div>
-      ) : null}
-      <hr />
-      <FacebookProvider appId="392511982027523">
-        <Comments href={`https://www.claimkraken.com${slug}`} />
-      </FacebookProvider>
+        <a
+          href="https://twitter.com/ClaimKraken?ref_src=twsrc%5Etfw"
+          className="twitter-follow-button"
+          data-size="large"
+          data-width="100%"
+          data-show-count="true">
+          Follow @ClaimKraken
+        </a>
+        <a
+          className="twitter-timeline"
+          href="https://twitter.com/ClaimKraken?ref_src=twsrc%5Etfw"
+          data-theme="dark"
+          data-width="100%"
+          data-height="500">
+          Tweets by ClaimKraken
+        </a>
+        <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+      </div>
     </section>
   )
 }

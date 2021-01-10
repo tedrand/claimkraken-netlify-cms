@@ -36,8 +36,8 @@ export const IndexPageTemplate = ({
           width: '100%',
           backgroundColor: '#f8f9fA'
         }}>
-          <img src="/img/headshot.png" 
-            className="card-img-top p-1" 
+          <img src="/img/headshot.png"
+            className="card-img-top p-1"
             alt="headshot"
             style={{
               maxWidth: '40%',
@@ -45,7 +45,7 @@ export const IndexPageTemplate = ({
               margin: 'auto',
               borderRadius: '50%',
               filter: 'grayscale(100%)'
-            }} 
+            }}
           />
           <div className="card-body">
             <h5 className="card-title">Theodore Rand</h5>
@@ -53,13 +53,13 @@ export const IndexPageTemplate = ({
             <a href="/about" className="btn btn-primary">Learn more About the Site</a>
           </div>
         </div>
-        <a 
-          href="https://twitter.com/ClaimKraken?ref_src=twsrc%5Etfw" 
-          className="twitter-follow-button" 
-          data-size="large" 
+        <a
+          href="https://twitter.com/ClaimKraken?ref_src=twsrc%5Etfw"
+          className="twitter-follow-button"
+          data-size="large"
           data-width="100%"
           data-show-count="true">
-            Follow @ClaimKraken
+          Follow @ClaimKraken
         </a>
         <a
           className="twitter-timeline"
@@ -68,7 +68,8 @@ export const IndexPageTemplate = ({
           data-width="100%"
           data-height="500">
           Tweets by ClaimKraken
-      </a>
+        </a>
+        <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
       </div>
     </div>
   </div>
