@@ -29,3 +29,24 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary:hover {
     background-color: #005758 !important;
 }
+
+.card-link {
+    text-decoration: none;
+    color: black;
+}
+
+.card-link:hover {
+    color: #7a49a5;
+}
+
+.card-preview-img {
+    background-color: #f8f9fA;
+}
+
+.comment-count div {
+    display: inline;
+}
+
+.blogroll-smallmatter * {
+    display: inline;
+}

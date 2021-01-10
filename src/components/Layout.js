@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import CookieConsent from 'react-cookie-consent'
 import Footer from '../components/Footer'
@@ -7,6 +7,15 @@ import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
   const { title } = useSiteMetadata()
+
+  useEffect(() => {
+    if (window.twttr) {
+      if (typeof window.twttr.widgets !== 'undefined') {
+        window.twttr.widgets.load()
+      }
+    }
+  })
+
   return (
     <div>
       <Helmet>

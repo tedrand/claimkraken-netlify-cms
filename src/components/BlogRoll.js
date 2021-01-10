@@ -2,6 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import { FacebookProvider, CommentsCount } from 'react-facebook'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faComment,
+  faCalendar,
+  faClock
+} from '@fortawesome/free-solid-svg-icons'
 
 class BlogRoll extends React.Component {
   render() {
@@ -15,35 +22,41 @@ class BlogRoll extends React.Component {
             <div className="card mb-2" key={post.id}>
               <div className="row">
                 {post.frontmatter.featuredimage ? (
-                  <div className="col-md-4">
+                  <div className="col-md-4 card-preview-img">
                     <PreviewCompatibleImage
                       imageInfo={{
                         image: post.frontmatter.featuredimage,
                         alt: `featured image thumbnail for post ${post.frontmatter.title}`,
                       }}
+                      style={{
+                        marginTop: '1em'
+                      }}
                     />
                   </div>
                 ) : null}
                 <div className="col-md-8">
-                  <div className="card-body">
-                    <Link
-                      className="card-title"
-                      to={post.fields.slug}
-                    >
-                      <h4>{post.frontmatter.title}</h4>
-                    </Link>
-                    <p className="card-text">
-                      <small className="text-muted">
-                        {post.frontmatter.date}
-                      </small><br />
-                      {post.frontmatter.description}
-                    </p>
-                    <p className="card-text">
-                      <Link className="btn btn-primary" to={post.fields.slug}>
-                        Keep Reading →
-                        </Link>
-                    </p>
-                  </div>
+                  <Link
+                    className="card-link"
+                    to={post.fields.slug}
+                  >
+                    <div className="card-body">
+                      <h6><b>{post.frontmatter.title}</b></h6>
+                      <p className="card-text">
+                        <small className="text-muted blogroll-smallmatter">
+                          <FontAwesomeIcon icon={faCalendar} size="1x" />&nbsp;{`${post.frontmatter.date}`}
+                          &nbsp;&nbsp;&nbsp;
+                          <FacebookProvider appId="392511982027523">
+                            <div className="comment-count"><FontAwesomeIcon icon={faComment} size="1x" />&nbsp;<CommentsCount href={`https://www.claimkraken.com${post.fields.slug}`} /></div>
+                          </FacebookProvider>
+                          &nbsp;&nbsp;&nbsp;
+                          <FontAwesomeIcon icon={faClock} size="1x" />&nbsp;{`${post.fields.readingTime.text}`}
+                        </small><br />
+                        <small>
+                          {post.frontmatter.description}
+                        </small>
+                      </p>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -75,6 +88,9 @@ export default () => (
               id
               fields {
                 slug
+                readingTime {
+                  text
+                }
               }
               frontmatter {
                 title
