@@ -15,7 +15,7 @@ tags:
 ---
 ![USPTO Fish Eye](/img/alexandriafisheye.jpg)
 
-**Link to the Memorandum:** <https://www.uspto.gov/sites/default/files/documents/IndefinitenessMemo.pdf>
+**Link to the Memorandum:** [](https://www.uspto.gov/sites/default/files/documents/IndefinitenessMemo.pdf)[USPTO Memorandum](<https://www.uspto.gov/sites/default/files/documents/IndefinitenessMemo.pdf>)
 
 On January 6, 2021, the United States Patent and Trademark Office (USPTO) issued a memorandum clarifying its indefiniteness analysis approach under 35 U.S.C. Section 112 in AIA post-grant proceedings. These proceedings include Reissues, Ex Parte Reexams, Inter Partes Reviews (IPRs), and Supplemental Examinations.<sup>1</sup> The memorandum notes that until recently, the approaches for claim construction and indefiniteness applied by the USPTO in these proceedings differed from the way courts would apply the standards. In 2018, the USPTO changed its standard for claim construction from the Broadest Reasonable Interpretation (BRI) to the *Phillips* standard to harmonize the Patent Trial and Appeal Board's (PTAB's) proceedings relative to the federal courts. This new decision to adopt the *Nautilus* standard for indefiniteness appears to be catalyzed by the same factors. Indeed, the memorandum notes that both the office and the courts "generally approach the definiteness requirement of \[Section] 112" during claim construction. Therefore they seem compelled to align the standards to provide uniformity (and avoid the potential for inconsistent judgments).<sup>2</sup>
 
@@ -47,6 +47,6 @@ The Memorandum notes that since the USPTO switched from the BRI standard for the
 
 \[7] Ex parte McAward, Appeal 2015-006416, 2017 WL 3947829, at *4 (PTAB Aug. 25, 2017).
 
-\[8] Memorandum at *4 (citing *BASF Corp. v. Ingevity South Carolina, LLC*, PGR2020-0037, Paper 19 at 12 (PTAB Sept. 10, 2020).
+\[8] Memorandum at *4 (citing* BASF Corp. v. Ingevity South Carolina, LLC*, PGR2020-0037, Paper 19 at 12 (PTAB Sept. 10, 2020).
 
 \[9] *Id.* at 5.
