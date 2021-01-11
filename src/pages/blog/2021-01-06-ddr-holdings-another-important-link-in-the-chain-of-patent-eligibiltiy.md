@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: "DDR Holdings: Another Important Link in the Chain of Patent Eligibiltiy"
-date: 2020-11-03T22:10:34.005Z
+date: 2021-01-07T16:54:28.778Z
 author: Theodore Rand
 description: In DDR Holdings, LLC v. Hotels.com, L.P., the Federal Circuit
   addressed several issues including the patentability of software claims.
