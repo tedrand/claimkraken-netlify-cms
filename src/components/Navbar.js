@@ -1,7 +1,11 @@
 import React from 'react'
-import { StaticQuery, Link } from 'gatsby'
-// import github from '../img/github-icon.svg'
-// import logo from '../img/logo.svg'
+import { StaticQuery, Link, graphql } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGithub,
+  faLinkedinIn,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons'
 
 import Search from '../components/Search'
 
@@ -70,6 +74,15 @@ const Navbar = class extends React.Component {
                   </li>
                 </ul>
                 <ul className="ml-auto navbar-nav">
+                  <li className="nav-item">
+                    <a className="nav-link" aria-label="Twitter Icon" href="https://twitter.com/ClaimKraken"><FontAwesomeIcon icon={faTwitter} size="1x" /></a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" aria-label="LinkedIn Icon" href="https://www.linkedin.com/company/claimkraken"><FontAwesomeIcon icon={faLinkedinIn} size="1x" /></a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" aria-label="Github Icon" href="https://github.com/tedrand/claimkraken-netlify-cms"><FontAwesomeIcon icon={faGithub} size="1x" /></a>
+                  </li>
                   <Search searchIndex={data.siteSearchIndex.index} />
                 </ul>
               </div>

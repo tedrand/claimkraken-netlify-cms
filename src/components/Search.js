@@ -14,11 +14,11 @@ export default class Search extends Component {
   render() {
     return (
       <div className="form-inline my-2 my-lg-0">
-        <input className="form-control mr-sm-2"
+        <input className="form-control me-2"
           type="text"
           value={this.state.query}
           onChange={this.search}
-          placeholder="enter search terms"
+          placeholder="start typing..."
         />
         <nav className="navbar search-nav"
           style={{ display: this.state.results.length ? "block" : "none", }}>
