@@ -10,9 +10,8 @@ description: Patent claims are the heart of the patent document and demarcate
 featuredpost: true
 featuredimage: /img/patent-claim.jpg
 tags:
-  - patent
-  - claims
-  - learn
+  - patent-claims
+  - learning-modules
 ---
 ![](/img/patent-claim.jpg)
 
