@@ -8,10 +8,10 @@ description: In DDR Holdings, LLC v. Hotels.com, L.P., the Federal Circuit
 featuredpost: false
 featuredimage: /img/online-4285034_640.png
 tags:
-  - software patents
-  - 35 U.S.C. Section 101
-  - patent eligibility
-  - federal circuit
+  - software-patents
+  - 35-USC-101
+  - patent-eligibility
+  - federal-circuit
 ---
 In *DDR Holdings, LLC v. Hotels.com, L.P.*, the United States Court of Appeals for the Federal Circuit (CAFC) addressed several issues related to the patentability of two of DDR's patents. In doing so, it provided another essential link in the chain of Federal Circuit jurisprudence on 35 U.S.C. Section 101. Defendants-Appellants National Leisure Group, Inc. and World Travel Holdings, Inc. (NLG) and Hotels.com, L.P. appealed from a finding of infringement in the United States District Court for the Eastern District of Texas (E.D. Texas).
 
