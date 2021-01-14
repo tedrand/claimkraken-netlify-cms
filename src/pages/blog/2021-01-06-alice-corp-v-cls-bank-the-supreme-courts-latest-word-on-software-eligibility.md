@@ -9,10 +9,10 @@ description: "In Alice Corp. Pty. Ltd. v. CLS Bank Int'l, the Supreme Court set
 featuredpost: true
 featuredimage: /img/alice-in-wonderland-symbols.jpg
 tags:
-  - supreme court
-  - software patents
-  - subject matter eligibility
-  - 35 U.S.C. Section 101
+  - supreme-court
+  - software-patents
+  - subject-matter-eligibility
+  - 35-USC-101
 ---
 In *Alice Corp. Pty. Ltd. v. CLS Bank Int'l*, the Supreme Court set out a new standard for subject matter eligibility under 35 U.S.C. Section 101. While the case was only decided about six years ago in 2014, it has profoundly impacted the patent laws, particularly when it comes to software patents. 
 
