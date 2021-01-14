@@ -14,7 +14,8 @@ featuredimage: /img/boom_pyramd_-7241830716-_-cropped-_-cropped-.jpg
 tags:
   - software-patents
   - 35-USC-101
-  - eligibility
+  - subject-matter-eligibility
+  - federal-circuit
 ---
 ![BOOM image](/img/boom_pyramd_-7241830716-_-cropped-_-cropped-.jpg)
 
