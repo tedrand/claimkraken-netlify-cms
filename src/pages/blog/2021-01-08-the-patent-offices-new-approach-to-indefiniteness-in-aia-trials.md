@@ -9,9 +9,9 @@ description: This article will discuss the recent memorandum that the United
 featuredpost: false
 featuredimage: /img/alexandriafisheye.jpg
 tags:
-  - USPTO
+  - USPTO-news
   - indefiniteness
-  - 35-usc-112
+  - 35-USC-112
 ---
 ![USPTO Fish Eye](/img/alexandriafisheye.jpg)
 

@@ -12,7 +12,7 @@ featuredpost: false
 featuredimage: /img/court.jpg
 tags:
   - international-law
-  - patents
+  - unified-patent-court
 ---
 Link to the Unified Patent Court Agreement: [Agreement on a Unified Patent Court](unified-patent-court.org/sites/default/files/upc-agreement.pdf)
 

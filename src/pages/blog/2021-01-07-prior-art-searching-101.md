@@ -10,8 +10,7 @@ featuredpost: false
 featuredimage: /img/search.jpg
 tags:
   - prior-art
-  - search
-  - patent
+  - learning-modules
 ---
 ![Search sign](/img/search.jpg)
 

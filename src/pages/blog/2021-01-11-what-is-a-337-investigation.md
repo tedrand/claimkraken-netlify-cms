@@ -10,8 +10,8 @@ featuredpost: false
 featuredimage: /img/injunction.png
 tags:
   - international-trade-commission
-  - ITC
-  - injunction
+  - learning-modules
+  - section-337-investigations
 ---
 Since I will be starting my internship at the International Trade Commission (ITC) next week, I decided this would be a good time to write some blog posts about the agency and how patent attorneys can leverage it to enforce patent rights for their clients. The ITC is unique in that it works in conjunction with the U.S. Customs and Border Protection ("CBP"), a bureau of the Department of Homeland Security, to enforce patent rights at the border by preventing unlawful imports of infringing goods. There are many unique aspects of enforcement under Section 337, and this article will provide a good primer on the topic. Without further ado, let's dive in.
 

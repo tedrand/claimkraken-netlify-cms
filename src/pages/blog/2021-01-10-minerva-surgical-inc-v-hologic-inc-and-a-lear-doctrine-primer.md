@@ -8,6 +8,10 @@ description: On Friday, January 8, 2021, the Supreme Court of the United States
   challenge the validity of the patent when being sued for infringement.
 featuredpost: false
 featuredimage: /img/estoppel_red_block.jpg
+tags:
+  - patent-licensing
+  - supreme-court
+  - assignor-estoppel
 ---
 ![estoppel red block](/img/estoppel_red_block.jpg)
 

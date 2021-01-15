@@ -10,9 +10,10 @@ description: On Wednesday, January 13, 2021, the United States Court of Appeals
 featuredpost: false
 featuredimage: /img/mario-1557240__340.jpg
 tags:
-  - eligibility
-  - 35-USC-101
   - software-patents
+  - 35-USC-101
+  - subject-matter-eligibility
+  - federal-circuit
 ---
 Link to Opinion: [iLife Technologies, Inc. v. Nintendo of America, Inc.](http://www.cafc.uscourts.gov/sites/default/files/opinions-orders/20-1477.OPINION.1-13-2021_1716793.pdf)
 

@@ -8,9 +8,8 @@ description: This post will discuss the different types of patent applications
 featuredpost: false
 featuredimage: /img/patent-applications.jpg
 tags:
-  - patent application
-  - learn
-  - patent
+  - patent-applications
+  - learning-modules
 ---
 There are several different types of patent applications that can be filed in the United States. A competent patent attorney must understand when and how to file each type of application. 
 

@@ -8,6 +8,12 @@ description: In State Street, the Federal Circuit denied the application of the
   Method Exception.
 featuredpost: false
 featuredimage: /img/valid.jpg
+tags:
+  - software-patents
+  - business-methods
+  - 35-USC-101
+  - subject-matter-eligibility
+  - federal-circuit
 ---
 **Link to Case:** [State St. Bank & Trust Co. v. Signature Fin. Grp., 149 F.3d 1368 (Fed. Cir. 1998)]("https://www.courtlistener.com/opinion/756414/state-street-bank-trust-co-v-signature-financial-group-inc/")
 

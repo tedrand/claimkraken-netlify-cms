@@ -4,6 +4,8 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
+import TwitterTimeline from '../components/TwitterTimeline'
+import TagList from '../components/TagList'
 
 export const IndexPageTemplate = ({
   image,
@@ -31,6 +33,8 @@ export const IndexPageTemplate = ({
         </div>
       </div>
       <div className="col-md-4 mt-3">
+        <TwitterTimeline />
+        <TagList />
         <h2>About the Author</h2>
         <div className="card mb-3" style={{
           width: '100%',
@@ -53,23 +57,6 @@ export const IndexPageTemplate = ({
             <a href="/about" className="btn btn-primary">Learn more About the Site</a>
           </div>
         </div>
-        <a
-          href="https://twitter.com/ClaimKraken?ref_src=twsrc%5Etfw"
-          className="twitter-follow-button"
-          data-size="large"
-          data-width="100%"
-          data-show-count="true">
-          Follow @ClaimKraken
-        </a>
-        <a
-          className="twitter-timeline"
-          href="https://twitter.com/ClaimKraken?ref_src=twsrc%5Etfw"
-          data-theme="dark"
-          data-width="100%"
-          data-height="500">
-          Tweets by ClaimKraken
-        </a>
-        <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
       </div>
     </div>
   </div>

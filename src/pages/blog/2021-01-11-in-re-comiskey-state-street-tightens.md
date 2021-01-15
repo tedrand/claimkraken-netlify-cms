@@ -8,6 +8,12 @@ description: In re Comiskey is a case from the United States Court of Appeals
   treatment under 35 U.S.C. Section 101.
 featuredpost: false
 featuredimage: /img/softwarepatent.jpg
+tags:
+  - software-patents
+  - business-methods
+  - 35-USC-101
+  - subject-matter-eligibility
+  - federal-circuit
 ---
 **Link to Case:** [In re Comiskey, 499 F.3d 1365 (Fed. Cir. 2007)]("https://www.courtlistener.com/opinion/1362987/in-re-comiskey/")
 

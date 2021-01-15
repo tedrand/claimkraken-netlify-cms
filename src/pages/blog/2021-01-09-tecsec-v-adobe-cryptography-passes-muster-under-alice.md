@@ -9,10 +9,10 @@ description: In TecSec, the Federal Circuit took a closer look at the issue of
 featuredpost: false
 featuredimage: /img/cryptography-1091255__340.jpg
 tags:
-  - patent
-  - software-patent
+  - software-patents
   - 35-USC-101
-  - eligibility
+  - subject-matter-eligibility
+  - federal-circuit
 ---
 ![cryptography word cloud](/img/cryptography-1091255__340.jpg)
 

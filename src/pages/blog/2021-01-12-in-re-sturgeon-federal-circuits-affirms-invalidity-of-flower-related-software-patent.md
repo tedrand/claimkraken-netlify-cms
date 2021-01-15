@@ -10,9 +10,10 @@ description: On January 12, 2021, the Federal Circuit affirmed a PTAB finding of
 featuredpost: false
 featuredimage: /img/flower-wallpaper-2295463_1280.jpg
 tags:
-  - patent-eligibility
   - software-patents
   - 35-USC-101
+  - subject-matter-eligibility
+  - federal-circuit
 ---
 ![pink flower blue background](/img/flower-wallpaper-2295463_1280.jpg)
 

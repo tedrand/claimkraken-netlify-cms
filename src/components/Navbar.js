@@ -63,11 +63,19 @@ const Navbar = class extends React.Component {
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/about">About</Link>
+                  <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Topics
+                    </a>
+                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a className="dropdown-item" href="/tags/federal-circuit/">Federal Circuit</a></li>
+                      <li><a className="dropdown-item" href="/tags/learning-modules/">Learning Modules</a></li>
+                      {/* <li><hr className="dropdown-divider" /></li> */}
+                      {/* <li><a className="dropdown-item" href="#">Something else here</a></li> */}
+                    </ul>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" aria-current="page" to="/blog">Blog</Link>
+                    <Link className="nav-link" to="/about">About</Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" aria-current="page" to="/contact">Contact</Link>

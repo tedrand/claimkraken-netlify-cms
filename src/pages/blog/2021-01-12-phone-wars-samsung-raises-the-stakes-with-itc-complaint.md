@@ -12,9 +12,11 @@ description: In my second installment of ITC Week, I am discussing a new twist
 featuredpost: false
 featuredimage: /img/960x0.jpg
 tags:
-  - itc
-  - frand
-  - sep
+  - international-trade-commission
+  - anti-suit-injunctions
+  - patent-licensing
+  - FRAND-licensing
+  - SEPs
 ---
 ![5G globe picture](/img/960x0.jpg)
 
