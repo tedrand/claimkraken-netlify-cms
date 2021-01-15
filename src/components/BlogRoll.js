@@ -45,7 +45,7 @@ class BlogRoll extends React.Component {
                         <small className="text-muted blogroll-smallmatter">
                           <FontAwesomeIcon icon={faCalendar} size="1x" />&nbsp;{`${post.frontmatter.date}`}
                           &nbsp;&nbsp;&nbsp;
-                          <FacebookProvider appId="392511982027523">
+                          <FacebookProvider appId="433938334407184">
                             <div className="comment-count"><FontAwesomeIcon icon={faComment} size="1x" />&nbsp;<CommentsCount href={`https://www.claimkraken.com${post.fields.slug}`} /></div>
                           </FacebookProvider>
                           &nbsp;&nbsp;&nbsp;

@@ -49,7 +49,7 @@ export const BlogPostTemplate = ({
           </div>
         ) : null}
         <hr />
-        <FacebookProvider appId="392511982027523">
+        <FacebookProvider appId="433938334407184">
           <Comments href={`https://www.claimkraken.com${slug}`} />
         </FacebookProvider>
       </div>
