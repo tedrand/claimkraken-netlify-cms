@@ -80,6 +80,24 @@ After determining what keywords will be the most relevant for the prior art sear
 
 There are many prior art databases out there in which you can find prior art references. One to consider is [Google Patents](https://patents.google.com/), which is publicly available and contains a massive amount of issued patents and published patent applications. Another resource that is commonly-utilized, particularly internationally, is [Espacenet](https://worldwide.espacenet.com/). While there may some small differences in what is available between the two platforms, I would say that the difference is more a matter of style. Espacenet has some more advanced features for searching, but Google Patents is probably more accessible for beginners. Another useful resource is [PatFT](http://patft.uspto.gov/) (which stands for Patent Full-Text Databases). I find PatFT particularly useful when I find a good prior art reference but I want to work with it in a more convenient manner than in a prior art database. It allows you to access plain text versions of the applications and patents, which you can put into a word document to perform more sophisticated highlight and search functions.
 
+#### Getting in the Weeds with Google Patents
+
+When it comes to prior-art searching with the Google Patents database, there is a lot more there than may meet the eye at first glance. When you go to the home page of the search tool, it presents you with a search box similar to the one on Google's own home page. From there, you can simply type relevant keywords that you want to search for in patents and patent applications. But there are also more advanced settings that can be leveraged by the tool. This article does not claim to provide all of the options available within Google Patents (because I do not know them all), but it should give you a good feel for some of the basic functionality of the tool.
+
+##### Using Boolean Operators in Google Patents
+
+Like other legal search tools, the heart of Google Patents is the option to perform boolean searches. Boolean searches allow you to combine words and phrases using the words AND, OR, NOT, and others to limit, broaden, or further define your search.<sup>4</sup> Here is a list of how some of these functions work:
+
+* **AND** – this operator will retrieve results that contain both words that are joined thereby. For instance, a search for (airplane AND motor) will only retrieve results that include both of the terms within the text of the patent.
+* **OR** – this operator will retrieve results that contain either of the words that are joined thereby. For instance, a search for (airplane OR motor) will retrieve results that include either of the terms within the text of the patent.
+* **!** or **\*** – these operators, sometimes referred to as "wildcards," can be used to search for different forms of a root word. For instance, a search for (throttl!) would return results for "throttle" or "throttling" or any other derivative of the root word.
+
+There are also "proximity operators" including **WITH**, **SAME**, and **ADJ/x** which will find words that are within a search number of terms of each other.
+
+##### Searching Different Parts of the Patent
+
+One thing that I think is particularly helpful in doing a patent search with Google Patents is being able to search within different parts of the patent. It allows you to narrow down to either the Title (TI), the Abstract (AB), or the Claims (CL). For example, you can search CL=(airplane AND motor) to find patents and applications that only contain both of these claim terms within the claims of the patent. This can be particularly helpful if using the tool to do a freedom to operate (FTO) search.
+
 
 
 \[1] In re Cronyn, 890 F.2d 1158, 1160 (Fed. Cir. 1989) (quoting *Constant v. Advanced Micro-Devices, Inc.*, 848 F.2d 1560, 1568 (Fed. Cir. 1988)).
@@ -87,3 +105,5 @@ There are many prior art databases out there in which you can find prior art ref
 \[2] MPEP Section 2152.02(d) (citing *Pfaff v. Wells Elecs., Inc.*, 525 U.S. 55, 67 (1998).
 
 \[3] *See, e.g.*, In re Klopfenstein, 380 F.3d 1345 (Fed. Cir. 2004).
+
+\[4] What is Boolean Search?, New York Public Library: Blogs (Feb. 22, 2011), [https://www.nypl.org/blog/2011/02/22/what-boolean-search#:~:text=Boolean%20searching%20is%20built%20on,broaden%2C%20or%20define%20your%20search](https://www.nypl.org/blog/2011/02/22/what-boolean-search#:~:text=Boolean%20searching%20is%20built%20on,broaden%2C%20or%20define%20your%20search.).
