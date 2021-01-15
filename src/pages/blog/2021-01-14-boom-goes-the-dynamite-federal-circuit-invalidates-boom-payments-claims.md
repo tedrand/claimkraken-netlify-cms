@@ -9,7 +9,7 @@ description: In "explosive" fashion, the United States Court of Appeals for the
   circumstances where buyers and sellers may not wish to exchange payments at
   the initial transaction time, such as when they agree to meet up later to
   exchange the goods and money.
-featuredpost: true
+featuredpost: false
 featuredimage: /img/boom_pyramd_-7241830716-_-cropped-_-cropped-.jpg
 tags:
   - software-patents

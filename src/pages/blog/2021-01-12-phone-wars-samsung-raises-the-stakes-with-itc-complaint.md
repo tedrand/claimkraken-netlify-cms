@@ -9,7 +9,7 @@ description: In my second installment of ITC Week, I am discussing a new twist
   anti-anti-suit injunction in response from the Eastern District of Texas),
   Samsung has raised the stakes in its dispute against Ericsson by filing an ITC
   complaint.
-featuredpost: false
+featuredpost: true
 featuredimage: /img/960x0.jpg
 tags:
   - international-trade-commission

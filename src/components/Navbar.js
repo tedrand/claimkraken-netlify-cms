@@ -6,6 +6,9 @@ import {
   faLinkedinIn,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
+import {
+  faMicrophone
+} from '@fortawesome/free-solid-svg-icons'
 
 import Search from '../components/Search'
 
@@ -73,6 +76,9 @@ const Navbar = class extends React.Component {
                       {/* <li><hr className="dropdown-divider" /></li> */}
                       {/* <li><a className="dropdown-item" href="#">Something else here</a></li> */}
                     </ul>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/tags/interviews/"><FontAwesomeIcon icon={faMicrophone} size="1x" />&nbsp;Interviews</Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/about">About</Link>
