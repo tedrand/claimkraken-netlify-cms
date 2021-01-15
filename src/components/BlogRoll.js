@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-import { FacebookProvider, CommentsCount } from 'react-facebook'
+// import { FacebookProvider, CommentsCount } from 'react-facebook'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faComment,
+  // faComment,
   faCalendar,
   faClock
 } from '@fortawesome/free-solid-svg-icons'
@@ -44,10 +44,10 @@ class BlogRoll extends React.Component {
                       <p className="card-text">
                         <small className="text-muted blogroll-smallmatter">
                           <FontAwesomeIcon icon={faCalendar} size="1x" />&nbsp;{`${post.frontmatter.date}`}
-                          &nbsp;&nbsp;&nbsp;
-                          <FacebookProvider appId="433938334407184">
+                          {/* &nbsp;&nbsp;&nbsp;
+                          <FacebookProvider appId="1044466529374649">
                             <div className="comment-count"><FontAwesomeIcon icon={faComment} size="1x" />&nbsp;<CommentsCount href={`https://www.claimkraken.com${post.fields.slug}`} /></div>
-                          </FacebookProvider>
+                          </FacebookProvider> */}
                           &nbsp;&nbsp;&nbsp;
                           <FontAwesomeIcon icon={faClock} size="1x" />&nbsp;{`${post.fields.readingTime.text}`}
                         </small><br />
@@ -80,7 +80,10 @@ export default () => (
       query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          filter: { frontmatter: { 
+            templateKey: { eq: "blog-post" }
+            featuredpost: { eq: false } 
+          } }
         ) {
           edges {
             node {

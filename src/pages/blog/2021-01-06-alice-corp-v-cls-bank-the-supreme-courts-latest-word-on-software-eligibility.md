@@ -6,7 +6,7 @@ date: 2021-01-06T16:54:08.252Z
 author: Theodore Rand
 description: "In Alice Corp. Pty. Ltd. v. CLS Bank Int'l, the Supreme Court set
   the new standard for software patentability under 35 U.S.C. Section 101. "
-featuredpost: true
+featuredpost: false
 featuredimage: /img/alice-in-wonderland-symbols.jpg
 tags:
   - supreme-court

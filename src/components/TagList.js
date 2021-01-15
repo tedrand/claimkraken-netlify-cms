@@ -11,6 +11,7 @@ class TagList extends React.Component {
         return (
             <div className="mb-3">
                 <h2>Tags</h2>
+                <hr />
                 <div className="container card" style={{
                     width: '100%',
                     backgroundColor: '#f8f9fA'

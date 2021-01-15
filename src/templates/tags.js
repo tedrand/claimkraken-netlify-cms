@@ -1,10 +1,10 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
-import { FacebookProvider, CommentsCount } from 'react-facebook'
+// import { FacebookProvider, CommentsCount } from 'react-facebook'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faComment,
+  // faComment,
   faCalendar,
   faClock
 } from '@fortawesome/free-solid-svg-icons'
@@ -42,10 +42,10 @@ class TagRoute extends React.Component {
                 <p className="card-text">
                   <small className="text-muted blogroll-smallmatter">
                     <FontAwesomeIcon icon={faCalendar} size="1x" />&nbsp;{`${post.node.frontmatter.date}`}
-                    &nbsp;&nbsp;&nbsp;
+                    {/* &nbsp;&nbsp;&nbsp;
                     <FacebookProvider appId="433938334407184">
                       <div className="comment-count"><FontAwesomeIcon icon={faComment} size="1x" />&nbsp;<CommentsCount href={`https://www.claimkraken.com${post.node.fields.slug}`} /></div>
-                    </FacebookProvider>
+                    </FacebookProvider> */}
                     &nbsp;&nbsp;&nbsp;
                     <FontAwesomeIcon icon={faClock} size="1x" />&nbsp;{`${post.node.fields.readingTime.text}`}
                   </small><br />

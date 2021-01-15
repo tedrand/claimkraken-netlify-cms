@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import { FacebookProvider, Comments } from 'react-facebook'
+// import { FacebookProvider, Comments } from 'react-facebook'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import ShareButtons from '../components/ShareButtons'
@@ -48,10 +48,10 @@ export const BlogPostTemplate = ({
             </ul>
           </div>
         ) : null}
-        <hr />
-        <FacebookProvider appId="433938334407184">
+        {/* <hr />
+        <FacebookProvider appId="1044466529374649">
           <Comments href={`https://www.claimkraken.com${slug}`} />
-        </FacebookProvider>
+        </FacebookProvider> */}
       </div>
       <div className="col-md-4 mt-3">
         <h2>About the Author</h2>

@@ -7,7 +7,7 @@ description: On Wednesday, January 13, 2021, the United States Court of Appeals
   for the Federal Circuit (CAFC) affirmed the invalidity of U.S. Patent No.
   6,864,796 (the '796 patent) based on eligibility grounds in iLife
   Technologies, Inc. v. Nintendo of America, Inc.
-featuredpost: false
+featuredpost: true
 featuredimage: /img/mario-1557240__340.jpg
 tags:
   - software-patents

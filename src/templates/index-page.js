@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
+import FeatureCarousel from '../components/FeatureCarousel'
 import BlogRoll from '../components/BlogRoll'
 import TwitterTimeline from '../components/TwitterTimeline'
 import TagList from '../components/TagList'
@@ -17,13 +18,12 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    <div className="heading">
-      <h3>{heading}</h3>
-      <p>{description}</p>
-    </div>
     <div className="row">
       <div className="col-md-8 mt-3">
-        <h2>Latest Stories</h2>
+        <h2>Featured Posts</h2>
+        <hr />
+        <FeatureCarousel />
+        <h2>Other Recent Posts</h2>
         <hr />
         <BlogRoll />
         <div className="d-flex">
@@ -36,6 +36,7 @@ export const IndexPageTemplate = ({
         <TwitterTimeline />
         <TagList />
         <h2>About the Author</h2>
+        <hr />
         <div className="card mb-3" style={{
           width: '100%',
           backgroundColor: '#f8f9fA'
@@ -104,14 +105,14 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      frontmatter {
-        title
+          markdownRemark(frontmatter: {templateKey: {eq: "index-page" } }) {
+          frontmatter {
+          title
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+          fluid(maxWidth: 2048, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
           }
         }
         heading
@@ -123,11 +124,11 @@ export const pageQuery = graphql`
         description
         intro {
           blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
+          image {
+          childImageSharp {
+          fluid(maxWidth: 240, quality: 64) {
+          ...GatsbyImageSharpFluid
+        }
               }
             }
             text

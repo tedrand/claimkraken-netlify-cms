@@ -7,7 +7,7 @@ author: Theodore Rand
 description: On January 12, 2021, the Federal Circuit affirmed a PTAB finding of
   patent ineligibility under 35 U.S.C. Section 101 for an application reciting
   claims for creating a floral arrangement on an electronic digital display.
-featuredpost: false
+featuredpost: true
 featuredimage: /img/flower-wallpaper-2295463_1280.jpg
 tags:
   - software-patents

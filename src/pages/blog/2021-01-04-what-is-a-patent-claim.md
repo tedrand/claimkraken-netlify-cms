@@ -7,7 +7,7 @@ description: Patent claims are the heart of the patent document and demarcate
   the bounds of the rights under the patent. This post will discuss the concept
   of patent claims and how to understand the concepts of claims as "fenceposts"
   marking the patent rights.
-featuredpost: true
+featuredpost: false
 featuredimage: /img/patent-claim.jpg
 tags:
   - patent-claims
