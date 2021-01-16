@@ -13,7 +13,7 @@ On September 14, 2020, the National Council for Expanding American Innovation (N
 
 As part of its first round of events, the NCEAI hosted an “Innovation Chat” with the Director of the United States Patent and Trademark Office (USPTO), Andrei Iancu, and Lisa Jorgenson, who was recently appointed as Deputy Director-General for Patents and Technology of the World Intellectual Property Organization (WIPO). Before starting at WIPO, Jorgenson served as Executive Director of the American Intellectual Property Law Association (AIPLA). The event initially took place on Tuesday, January 12, 2021, but there is a recording on the USPTO’s website ([here](https://rev-vbrick.uspto.gov/#/videos/2e2a1cc5-4a48-4708-8d05-d00de4c22050)). I have summarized the discussion below.
 
-<iframe width="640" height="360" src="https://rev-vbrick.uspto.gov/embed?id=2e2a1cc5-4a48-4708-8d05-d00de4c22050" style="" frameborder="0" allowfullscreen></iframe>
+<iframe style="max-width: 80%; margin; auto;" src="https://rev-vbrick.uspto.gov/embed?id=2e2a1cc5-4a48-4708-8d05-d00de4c22050" style="" frameborder="0" allowfullscreen></iframe>
 
 ## Introduction by Andrei Iancu
 
