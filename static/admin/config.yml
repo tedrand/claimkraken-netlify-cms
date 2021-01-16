@@ -58,3 +58,10 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "privacy-policy-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/terms-of-use/index.md"
+        label: "Terms of Use"
+        name: "terms-of-use"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "terms-of-use-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
