@@ -8,6 +8,9 @@ description: On Tuesday, January 12, 2021, the National Council for Expanding
   context of the initiative. Here's a recap of the event.
 featuredpost: true
 featuredimage: /img/nceai682.jpg
+tags:
+  - diversity-and-inclusion
+  - NCEAI
 ---
 On September 14, 2020, the National Council for Expanding American Innovation (NCEAI) had its inaugural meeting. It slated several events for this year to start pushing towards fostering a more inclusive innovation ecosystem. The goal of the NCEAI is to develop a long-term and comprehensive plan for expanding participation in America’s innovation ecosystem among women, minorities, other underrepresented, and geographically. The strategy aims to promote innovation starting at the lowest levels (as early as kindergarten) and up to graduate-level programs and industry.
 
@@ -55,4 +58,4 @@ The discussion wrapped up with a question about how to get involved with the eff
 
 The conversation certainly got me excited about finding ways to get involved so that we, as a patent community, can keep the ball rolling in the effort. It is critically important for us to engage in the NCEAI’s mission because, as Iancu said, the government can only do so much. I will continue to follow along with the rest of the year’s events and keep readers updated to help play my part in spreading awareness. If you have any other questions about the organization, [here is the NCEAI’s resource page](https://www.uspto.gov/initiatives/expanding-innovation/national-council-expanding-american-innovation).
 
-<!--EndFragment-->
+\#ExpandingAmericanInnovation
