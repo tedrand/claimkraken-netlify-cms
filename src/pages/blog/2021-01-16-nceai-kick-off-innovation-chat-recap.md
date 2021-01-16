@@ -7,7 +7,7 @@ description: On Tuesday, January 12, 2021, the National Council for Expanding
   American Innovation (NCEAI) hosted its first event of 2021, discussing the
   context of the initiative. Here's a recap of the event.
 featuredpost: true
-featuredimage: /img/nceai682.jpg
+featuredimage: /img/dab5257b99fec40e651d202bd80db924.jpg
 tags:
   - diversity-and-inclusion
   - NCEAI
