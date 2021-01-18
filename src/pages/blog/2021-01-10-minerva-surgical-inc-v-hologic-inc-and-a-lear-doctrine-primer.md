@@ -6,7 +6,7 @@ author: Theodore Rand
 description: On Friday, January 8, 2021, the Supreme Court of the United States
   agreed to hear a case about whether an assignor of a patent can subsequently
   challenge the validity of the patent when being sued for infringement.
-featuredpost: true
+featuredpost: false
 featuredimage: /img/estoppel_red_block.jpg
 tags:
   - patent-licensing

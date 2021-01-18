@@ -6,7 +6,7 @@ author: Theodore Rand
 description: The United States Patent and Trademark Office (USPTO) recently
   released a report about the rapid increase in trademark and patent filings at
   both the USPTO and abroad. This article summarizes the report.
-featuredpost: false
+featuredpost: true
 featuredimage: /img/shanghai_-_skyline_sunset_0057.jpg
 tags:
   - USPTO
