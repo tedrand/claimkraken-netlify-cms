@@ -9,7 +9,7 @@ description: In Haag-Streit AG v. Eidolon Optical, LLC, the United States Court
   a device that illuminates a patient's eye while examining it for epithelial
   defects.
 featuredpost: true
-featuredimage: /img/download-1-.jfif
+featuredimage: /img/ovement-of-micropartic...y-beams-of-laser.jpg
 tags:
   - 35-USC-103
   - nonobviousness
