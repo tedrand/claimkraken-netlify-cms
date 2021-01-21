@@ -19,7 +19,7 @@ class TagList extends React.Component {
                     <ul className="nav flex-column">
                         {tags.map((tag) => (
                             <li className="nav-item" key={tag.fieldValue}>
-                                <Link className="nav-link" to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                                <Link className="nav-link tag-link" to={`/tags/${kebabCase(tag.fieldValue)}/`}>
                                     {tag.fieldValue} ({tag.totalCount})
                                 </Link>
                             </li>

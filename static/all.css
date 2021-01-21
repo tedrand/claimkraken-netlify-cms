@@ -70,4 +70,8 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 5px solid #006D6F !important;
 }
 
+.tag-link {
+    color: #006D6F;
+    padding: 0.25rem 0.5rem;
+}
 
