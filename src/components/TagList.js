@@ -9,13 +9,10 @@ class TagList extends React.Component {
             return b.totalCount - a.totalCount;
         })
         return (
-            <div className="mb-3">
-                <h2>Tags</h2>
+            <div>
+                <h3>Tags</h3>
                 <hr />
-                <div className="container card" style={{
-                    width: '100%',
-                    // backgroundColor: '#f8f9fA'
-                }}>
+                <div>
                     <ul className="nav flex-column">
                         {tags.map((tag) => (
                             <li className="nav-item" key={tag.fieldValue}>

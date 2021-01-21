@@ -6,7 +6,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import FeatureCarousel from '../components/FeatureCarousel'
 import BlogRoll from '../components/BlogRoll'
-// import TwitterTimeline from '../components/TwitterTimeline'
+import TwitterTimeline from '../components/TwitterTimeline'
 import TagList from '../components/TagList'
 
 export const IndexPageTemplate = ({
@@ -20,12 +20,13 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <div className="row">
-      <div className="col-md-8 mt-3">
-        <h2>Featured Posts</h2>
+      <div className="col-md-9">
+        <h3>Blog Posts</h3>
         <hr />
+        <h4>Featured Posts</h4>
         <FeatureCarousel />
-        <h2>Other Recent Posts</h2>
-        <hr />
+        <hr /><br/>
+        <h4>Other Recent Posts</h4>
         <BlogRoll />
         <div className="d-flex">
           <Link className="btn btn-block btn-secondary flex-grow-1" to="/blog">
@@ -33,8 +34,8 @@ export const IndexPageTemplate = ({
           </Link>
         </div>
       </div>
-      <div className="col-md-4 mt-3">
-        {/* <TwitterTimeline /> */}
+      <div className="col-md-3">
+        <TwitterTimeline />
         <TagList />
       </div>
     </div>

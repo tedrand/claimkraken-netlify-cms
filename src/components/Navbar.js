@@ -7,7 +7,14 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 import {
-  faMicrophone
+  faBook,
+  faEnvelope,
+  faEnvelopeSquare,
+  faGavel,
+  faHome,
+  faMicrophone,
+  faPortrait,
+  faUniversity
 } from '@fortawesome/free-solid-svg-icons'
 
 // import Search from '../components/Search'
@@ -57,7 +64,7 @@ const Navbar = class extends React.Component {
           <nav id="topNav" className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#292b2c' }}>
             <div className="container-fluid">
               <Link className="navbar-brand" to="/">
-                ClaimKraken
+                <FontAwesomeIcon icon={faHome} size="1x" />&nbsp;ClaimKraken
               </Link>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -68,11 +75,15 @@ const Navbar = class extends React.Component {
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item dropdown">
                     <button className="btn btn-link nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                      Topics
+                      <FontAwesomeIcon icon={faBook} size="1x" />&nbsp;Topics
                     </button>
-                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <Link className="dropdown-item" to="/tags/federal-circuit/">Federal Circuit</Link>
-                      <Link className="dropdown-item" to="/tags/learning-modules/">Learning Modules</Link>
+                    <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                      <Link className="dropdown-item" to="/tags/federal-circuit/">
+                        <FontAwesomeIcon icon={faGavel} size="1x" />&nbsp;Federal Circuit
+                      </Link>
+                      <Link className="dropdown-item" to="/tags/learning-modules/">
+                        <FontAwesomeIcon icon={faUniversity} size="1x" />&nbsp;Learning Modules
+                      </Link>
                       {/* <li><hr className="dropdown-divider" /></li> */}
                       {/* <li><a className="dropdown-item" href="#">Something else here</a></li> */}
                     </ul>
@@ -81,10 +92,14 @@ const Navbar = class extends React.Component {
                     <Link className="nav-link" to="/tags/interviews/"><FontAwesomeIcon icon={faMicrophone} size="1x" />&nbsp;Interviews</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/about">About</Link>
+                    <Link className="nav-link" to="/about">
+                      <FontAwesomeIcon icon={faPortrait} size="1x" />&nbsp;About
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/contact">Contact</Link>
+                    <Link className="nav-link" to="/contact">
+                      <FontAwesomeIcon icon={faEnvelope} size="1x" />&nbsp;Contact
+                    </Link>
                   </li>
                 </ul>
                 <ul className="ml-auto navbar-nav">

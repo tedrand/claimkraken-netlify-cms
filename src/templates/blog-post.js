@@ -9,6 +9,7 @@ import Content, { HTMLContent } from '../components/Content'
 import ShareButtons from '../components/ShareButtons'
 // import TwitterTimeline from '../components/TwitterTimeline'
 import TagList from '../components/TagList'
+import TwitterTimeline from '../components/TwitterTimeline'
 
 export const BlogPostTemplate = ({
   content,
@@ -26,11 +27,11 @@ export const BlogPostTemplate = ({
 
   return (
     <section className="container row">
-      <div className="col-md-8 mt-3">
+      <div className="col-md-9">
         {helmet || ''}
-        <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+        <h3 className="title is-size-2 has-text-weight-bold is-bold-light">
           {title}
-        </h1>
+        </h3>
         <p>Date Published: {date}</p>
         <small>Author: {author}</small>
         <br /><br />
@@ -55,8 +56,8 @@ export const BlogPostTemplate = ({
           <Comments href={`https://www.claimkraken.com${slug}`} />
         </FacebookProvider> */}
       </div>
-      <div className="col-md-4 mt-3">
-        {/* <TwitterTimeline /> */}
+      <div className="col-md-3">
+        <TwitterTimeline />
         <TagList />
       </div>
     </section>

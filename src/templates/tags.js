@@ -12,6 +12,7 @@ import {
 import TagList from '../components/TagList'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Layout from '../components/Layout'
+import TwitterTimeline from '../components/TwitterTimeline'
 
 class TagRoute extends React.Component {
   render() {
@@ -38,7 +39,7 @@ class TagRoute extends React.Component {
               to={post.node.fields.slug}
             >
               <div className="card-body">
-                <h6><b>{post.node.frontmatter.title}</b></h6>
+                <h5>{post.node.frontmatter.title}</h5>
                 <p className="card-text">
                   <small className="text-muted blogroll-smallmatter">
                     <FontAwesomeIcon icon={faCalendar} size="1x" />&nbsp;{`${post.node.frontmatter.date}`}
@@ -71,9 +72,10 @@ class TagRoute extends React.Component {
         <section>
           <Helmet title={`${tag} | ${title}`} />
           <div>
-            <h3>{tagHeader}</h3>
             <div className="row">
-              <div className="col-md-8 mt-3">
+              <div className="col-md-9">
+                <h4>{tagHeader}</h4>
+                <hr/>
                 {postLinks}
                 <div className="d-flex">
                   <Link className="btn btn-block btn-secondary flex-grow-1" to="/tags/">
@@ -81,8 +83,8 @@ class TagRoute extends React.Component {
                   </Link>
                 </div>
               </div>
-              <div className="col-md-4 mt-3">
-                {/* <TwitterTimeline /> */}
+              <div className="col-md-3">
+                <TwitterTimeline />
                 <TagList />
                 {/* <h2>About the Author</h2> */}
                 {/* <div className="card mb-3" style={{

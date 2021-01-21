@@ -40,7 +40,7 @@ class BlogRoll extends React.Component {
                     to={post.fields.slug}
                   >
                     <div className="card-body">
-                      <h3>{post.frontmatter.title}</h3>
+                      <h5>{post.frontmatter.title}</h5>
                       <p className="card-text">
                         <small className="text-muted blogroll-smallmatter">
                           <FontAwesomeIcon icon={faCalendar} size="1x" />&nbsp;{`${post.frontmatter.date}`}
