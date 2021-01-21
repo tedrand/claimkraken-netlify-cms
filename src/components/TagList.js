@@ -14,7 +14,7 @@ class TagList extends React.Component {
                 <hr />
                 <div className="container card" style={{
                     width: '100%',
-                    backgroundColor: '#f8f9fA'
+                    // backgroundColor: '#f8f9fA'
                 }}>
                     <ul className="nav flex-column">
                         {tags.map((tag) => (
