@@ -29,7 +29,7 @@ export const IndexPageTemplate = ({
         <BlogRoll />
         <div className="d-flex">
           <Link className="btn btn-block btn-secondary flex-grow-1" to="/blog">
-            Read more
+            See All Blog Posts
           </Link>
         </div>
       </div>
