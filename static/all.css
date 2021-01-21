@@ -74,3 +74,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #006D6F;
     padding: 0.25rem 0.5rem;
 }
+
+#topNav * .nav-link {
+    color: #fcfcff;
+}
