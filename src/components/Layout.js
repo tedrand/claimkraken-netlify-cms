@@ -41,7 +41,7 @@ const TemplateWrapper = ({ children }) => {
          <a href="/privacy-policy"> Privacy Policy </a>
         for more information.
       </CookieConsent>
-      <script src="/bootstrap.min.js"></script>
+      <script src="/bootstrap.bundle.min.js"></script>
     </div>
   )
 }
