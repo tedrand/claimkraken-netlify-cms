@@ -10,7 +10,7 @@ import {
   faMicrophone
 } from '@fortawesome/free-solid-svg-icons'
 
-import Search from '../components/Search'
+// import Search from '../components/Search'
 
 const navQuery = graphql`
 query SearchIndexQuery {

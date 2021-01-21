@@ -8,7 +8,7 @@ import {
   faCalendar,
   faClock
 } from '@fortawesome/free-solid-svg-icons'
-import TwitterTimeline from '../components/TwitterTimeline'
+// import TwitterTimeline from '../components/TwitterTimeline'
 import TagList from '../components/TagList'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Layout from '../components/Layout'

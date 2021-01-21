@@ -7,7 +7,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import ShareButtons from '../components/ShareButtons'
-import TwitterTimeline from '../components/TwitterTimeline'
+// import TwitterTimeline from '../components/TwitterTimeline'
 import TagList from '../components/TagList'
 
 export const BlogPostTemplate = ({
