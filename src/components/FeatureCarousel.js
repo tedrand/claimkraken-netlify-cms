@@ -27,7 +27,7 @@ class FeatureCarousel extends React.Component {
                     to={post.fields.slug}
                   >
                     <div className="card-body">
-                      <h6><b>{post.frontmatter.title}</b></h6>
+                      <h3 className="card-title">{post.frontmatter.title}</h3>
                       <p className="card-text">
                         <small className="text-muted blogroll-smallmatter">
                           <FontAwesomeIcon icon={faCalendar} size="1x" />&nbsp;{`${post.frontmatter.date}`}

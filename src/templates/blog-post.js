@@ -40,7 +40,7 @@ export const BlogPostTemplate = ({
         <PostContent className="post-content" content={content} />
         {tags && tags.length ? (
           <div style={{ marginTop: `4rem` }}>
-            <h4>Tags</h4>
+            <h3>Tags</h3>
             <ul className="nav">
               {tags.map((tag) => (
                 <li className="nav-item" key={tag + `tag`}>

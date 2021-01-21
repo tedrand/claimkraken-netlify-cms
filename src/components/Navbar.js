@@ -71,8 +71,8 @@ const Navbar = class extends React.Component {
                       Topics
                     </button>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a className="dropdown-item" href="/tags/federal-circuit/">Federal Circuit</a></li>
-                      <li><a className="dropdown-item" href="/tags/learning-modules/">Learning Modules</a></li>
+                      <Link className="dropdown-item" to="/tags/federal-circuit/">Federal Circuit</Link>
+                      <Link className="dropdown-item" to="/tags/learning-modules/">Learning Modules</Link>
                       {/* <li><hr className="dropdown-divider" /></li> */}
                       {/* <li><a className="dropdown-item" href="#">Something else here</a></li> */}
                     </ul>
