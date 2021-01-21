@@ -24,24 +24,6 @@ const TemplateWrapper = ({ children }) => {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossOrigin="anonymous"></link>
         <link href="/all.css" rel="stylesheet" />
       </Helmet>
-      <div className="jumbotron">
-        <div className="col-sm-6 mt-1 mb-1 mx-auto">
-          <h1
-            style={{
-              color: 'white',
-              lineHeight: '1',
-              padding: '0.25em',
-            }}
-          >{title}</h1>
-          <h2
-            style={{
-              color: 'white',
-              lineHeight: '1',
-              padding: '0.25em',
-            }}
-          >A Hub for Patent Law News</h2>
-        </div>
-      </div>
       <Navbar />
       <div className="container mt-3 mb-3">
         {children}

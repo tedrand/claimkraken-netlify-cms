@@ -5,7 +5,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import FeatureCarousel from '../components/FeatureCarousel'
 import BlogRoll from '../components/BlogRoll'
-import TwitterTimeline from '../components/TwitterTimeline'
+// import TwitterTimeline from '../components/TwitterTimeline'
 import TagList from '../components/TagList'
 
 export const IndexPageTemplate = ({
@@ -33,31 +33,8 @@ export const IndexPageTemplate = ({
         </div>
       </div>
       <div className="col-md-4 mt-3">
-        <TwitterTimeline />
+        {/* <TwitterTimeline /> */}
         <TagList />
-        <h2>About the Author</h2>
-        <hr />
-        <div className="card mb-3" style={{
-          width: '100%',
-          backgroundColor: '#f8f9fA'
-        }}>
-          <img src="/img/headshot.png"
-            className="card-img-top p-1"
-            alt="headshot"
-            style={{
-              maxWidth: '40%',
-              display: 'block',
-              margin: 'auto',
-              borderRadius: '50%',
-              filter: 'grayscale(100%)'
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">Theodore Rand</h5>
-            <p className="card-text">I'm a law student and USPTO Registered Patent Agent.</p>
-            <a href="/about" className="btn btn-primary">Learn more About the Site</a>
-          </div>
-        </div>
       </div>
     </div>
   </div>

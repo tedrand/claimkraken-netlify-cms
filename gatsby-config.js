@@ -159,6 +159,20 @@ module.exports = {
       }
     },
     'gatsby-plugin-sitemap',
-    `gatsby-plugin-fontawesome-css`
+    `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `ClaimKraken.com`,
+        short_name: `claimkraken`,
+        start_url: `/`,
+        background_color: `#FFF`,
+        theme_color: `#006D6F`,
+        display: `standalone`,
+        icon: `static/img/favicon-16x16.png`,
+      }
+    },
+    `gatsby-plugin-offline`,
+    "gatsby-plugin-webpack-bundle-analyser-v2"
   ],
 }

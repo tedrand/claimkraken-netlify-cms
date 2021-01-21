@@ -54,7 +54,7 @@ const Navbar = class extends React.Component {
       <StaticQuery
         query={navQuery}
         render={data => (
-          <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#006D6F' }}>
+          <nav id="topNav" className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#292b2c' }}>
             <div className="container-fluid">
               <Link className="navbar-brand" to="/">
                 ClaimKraken
@@ -84,7 +84,7 @@ const Navbar = class extends React.Component {
                     <Link className="nav-link" to="/about">About</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" aria-current="page" to="/contact">Contact</Link>
+                    <Link className="nav-link" to="/contact">Contact</Link>
                   </li>
                 </ul>
                 <ul className="ml-auto navbar-nav">
@@ -97,7 +97,7 @@ const Navbar = class extends React.Component {
                   <li className="nav-item">
                     <a className="nav-link" aria-label="Github Icon" href="https://github.com/tedrand/claimkraken-netlify-cms"><FontAwesomeIcon icon={faGithub} size="1x" /></a>
                   </li>
-                  <Search searchIndex={data.siteSearchIndex.index} />
+                  {/* <Search searchIndex={data.siteSearchIndex.index} /> */}
                 </ul>
               </div>
             </div>
