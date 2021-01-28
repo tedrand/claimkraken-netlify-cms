@@ -1,10 +1,15 @@
 ---
 templateKey: blog-post
-title: "Working at the Country's Most Innovative Company: An Interview with Former IBM Intern Shireen Bhatia"
+title: "Working at the Country's Most Innovative Company: An Interview with
+  Former IBM Intern Shireen Bhatia"
 date: 2021-01-15T14:03:26.703Z
 author: Theodore Rand
-description: In 2020, IBM scientists and researchers received 9,130 United States patent grants, making them the top patent recipient for the 28th year in a row. I got a chance to interview Shireen Bhatia, who interned at “Big Blue” during her first summer of law school to talk about her experience working at one of the world's most innovative companies.
-featuredpost: true
+description: In 2020, IBM scientists and researchers received 9,130 United
+  States patent grants, making them the top patent recipient for the 28th year
+  in a row. I got a chance to interview Shireen Bhatia, who interned at “Big
+  Blue” during her first summer of law school to talk about her experience
+  working at one of the world's most innovative companies.
+featuredpost: false
 featuredimage: /img/shireen-headshot.jpg
 tags:
   - interviews
