@@ -15,7 +15,7 @@ tags:
   - 35-USC-103
   - obviousness
 ---
-**Link to Case:** http://www.cafc.uscourts.gov/sites/default/files/opinions-orders/20-1271.OPINION.1-27-2021_1723945.pdf
+**Link to Case:** [KEYnetik, Inc. v. Samsung Electronics Co., Ltd.](http://www.cafc.uscourts.gov/sites/default/files/opinions-orders/20-1271.OPINION.1-27-2021_1723945.pdf)
 
 On January 27, in KEYnetik, Inc. v. Samsung Electronics Co., Ltd., the United States Court of Appeals for the Federal Circuit (CAFC) affirmed-in-part, vacated-in-part and remanded an obviousness determination by the Patent Trial and Appeal Board (PTAB). While the CAFC affirmed the finding of obviousness of certain claims and agreed with the PTAB’s holding of a motivation to combine for invalidated claims 4, 7, 15, and 18, it vacated and remanded the obviousness determination concerning these claims for the Board to determine if there was a reasonable expectation of success. 
 The patent, U.S. Patent No. 8,370,106, recites a system, method, and article for processing motion. The system uses motion sensors and an orientation detector to detect motion “such as movement and rest.” The system also includes an “interference state machine” for storing sequences of “detected motion conditions” and producing a profile description therefor. One embodiment discusses using these states of motion to allow a user to answer an incoming call on a handheld phone by a sequence of gestures. Samsung Electronics Co., Ltd. (Samsung) filed a petition for inter partes review (IPR), and the PTAB found all the claims obvious. 
