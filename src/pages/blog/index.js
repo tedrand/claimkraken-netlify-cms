@@ -16,7 +16,7 @@ export default class BlogIndexPage extends React.Component {
             <BlogRoll />
           </div>
           <div className="col-md-3">
-            <TwitterTimeline />
+            {/* <TwitterTimeline /> */}
             <TagList />
           </div>
         </div>

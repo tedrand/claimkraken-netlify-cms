@@ -57,7 +57,7 @@ export const BlogPostTemplate = ({
         </FacebookProvider> */}
       </div>
       <div className="col-md-3">
-        <TwitterTimeline />
+        {/* <TwitterTimeline /> */}
         <TagList />
       </div>
     </section>

@@ -35,7 +35,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
       <div className="col-md-3">
-        <TwitterTimeline />
+        {/* <TwitterTimeline /> */}
         <TagList />
       </div>
     </div>

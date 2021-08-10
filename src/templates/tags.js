@@ -84,7 +84,7 @@ class TagRoute extends React.Component {
                 </div>
               </div>
               <div className="col-md-3">
-                <TwitterTimeline />
+                {/* <TwitterTimeline /> */}
                 <TagList />
                 {/* <h2>About the Author</h2> */}
                 {/* <div className="card mb-3" style={{
