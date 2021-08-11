@@ -11,39 +11,45 @@ description: In this blog post, I will discuss how to collect opinions from the
 featuredpost: true
 featuredimage: /img/markus-spiske-iar-afb0qqw-unsplash.jpg
 ---
-**Here's a Link to the Code for this post:** https://github.com/tedrand/Court-Tracking-Tutorial/tree/main/Part%201
+**Here's a link to the code for this post:** https://github.com/tedrand/Court-Tracking-Tutorial/tree/main/Part%201
 
-Regardless of what you think about the latest opinions, one great thing about patent law is that the United States Court of Appeals for the Federal Circuit (CAFC) is a single appellate court that controls much of how patent laws are applied. For this reason, many patent practitioners would find relevant an application that tracks the CAFC and can inform the practitioner of new decisions. Some tools, like Westlaw or Lexis Nexis, are available but at a high cost. Other tools, like [DocketNavigator](https://brochure.docketnavigator.com/), are available at a lower price. But they also may require some understanding of complex tooling.
+One great thing about patent law is that the United States Court of Appeals for the Federal Circuit (CAFC) is a single appellate court that controls much of how patent laws are applied. For this reason, many patent practitioners would find relevant an application that tracks the CAFC. Some tools, like Westlaw or Lexis Nexis, are available but at a high cost. Other tools, like [DocketNavigator](https://brochure.docketnavigator.com/), are available at a lower price. But they are still generally cost-prohibitive for personal use and also can involve complex tooling.
 
 It may not make sense for a company to sell an application that delivers opinions from just one court or even just a subset of that. Thankfully, we can. And quickly at no cost. This blog post will explain how to create a court tracker with the CourtListener API and Python. In future posts, I will also discuss some ways to visualize this data to be the most useful. 
 
 So, without further ado, let’s dive in.
 
-
-
 ## Step 1: Obtain a CourtListener API Key
 
-As noted on the [homepage of CourtListener.com](https://www.courtlistener.com/): “CourtListener is a free legal research website containing millions of legal opinions from federal and state courts.” CourtListener is sponsored by a 501(c)(3) organization called the Free Law Project. Not only is CourtListener a good resource in itself for finding legal opinions through its user interface, but it also exposes its data through an API.
+As noted on the [homepage of CourtListener.com](https://www.courtlistener.com/): “CourtListener is a free legal research website containing millions of legal opinions from federal and state courts.” CourtListener is sponsored by a 501(c)(3) organization called the [Free Law Project](https://free.law/). Not only is CourtListener a good resource in itself for finding legal opinions through its user interface, but it also exposes its data through an API.
 
-To learn more about CourtListener’s API, scroll down to the bottom of the page and click on [the tab that says “APIs and Bulk Data.”](https://www.courtlistener.com/api/) After clicking that link, it will go to a page that shows three options for accessing CourtListener’s data. For us, the “API” option will be what we want because we want the most up-to-date data without necessarily copying ALL of CourtListener’s data onto a server. 
+> **Note:** CourtListener's license is [Gnu General Public License (GPLv3)](https://github.com/freelawproject/courtlistener/blob/master/LICENSE.txt).
+
+To start working with CourtListener’s API, scroll down to the bottom of the page and click on [the tab that says “APIs and Bulk Data.”](https://www.courtlistener.com/api/) After clicking that link, it will go to a page that shows three options for accessing CourtListener’s data. For us, the “API” option will be what we want because (a) we want the most up-to-date data (unlike Bulk Data), and (b) we don't want to copy ALL of CourtListener’s data onto a server (unlike Replication), or even set up a server that is constantly copying data. 
 
 ### Wait, hold up. What’s an API??
 
 Many of us in the IP community have some vague understanding of what an application programming interface (API) is after the *Google v. Oracle* opinion earlier in 2021. However, it may not be immediately apparent why we are using one in this situation.
 
-First of all, the CourtListener API is a REST API—that is, it “conforms to the constraints of REST architectural style and allows for interaction with RESTful web services.” The web server that it allows us to interact with is its server containing the court data. Essentially, it will enable you to send a request containing URL-encoded variables specifying, e.g., what court to collect data from, what date range, etc. It will return data according to those variables. 
+First of all, the CourtListener API is a REST API—that is, it “[conforms to the constraints of REST architectural style and allows for interaction with RESTful web services](https://www.redhat.com/en/topics/api/what-is-a-rest-api#:~:text=choose%20Red%20Hat%3F-,Overview,by%20computer%20scientist%20Roy%20Fielding.).” The web server that it allows us to interact with is its server containing the court data. Essentially, it will enable you to send a request containing variables (encoded into the URL), *e.g.*, <u>what court</u> to collect data from, or <u>what date range</u> to collect data for. It will return data according to those variables. 
 
-You can find much more detail about how CourtListener stores data on its server by visiting the REST API home page. So, I am not going to go into more depth here. But readers should recognize that this is a complex service. While CourtListener does a great job as a free service, there may be discrepancies between what we receive from CourtListener and the absolute truth we seek. 
+You can find much more detail about how CourtListener stores data on its server by visiting [its REST API home page](https://www.courtlistener.com/api/rest-info/). So, I am not going to go into more depth here. 
+
+> **Note:** If you come away with nothing else from this blog post, I recommend skimming this web page.
+
+But readers should recognize that this is a complex service. While CourtListener does a great job as a free service, there may be discrepancies between what we receive from CourtListener and the absolute truth we seek. Particularly when data looks funky or incomplete, you may want to do some cross-comparisons. 
 
 
 
 ## Step 2: Install Anaconda
 
-As someone who likes to control what software is on my computer, I first cringed at the thought of installing this bloated thing called “Anaconda,” which [the website describes as a “Python distribution platform.”](https://anaconda.org/) But I’ve slowly converted, and it is now the primary way I work with Python. Essentially it is a distribution of Python 3 that comes with some popular data libraries—and, importantly, environments that support implementations of those libraries in a single application. 
+As someone who likes to control what software is on my computer, I first cringed at the thought of installing “Anaconda,” which [the website describes as a “Python distribution platform.”](https://anaconda.org/) But I’ve slowly converted, and it is now the primary way I work with Python. Essentially it is a distribution of Python 3 that comes with some popular data libraries—and, importantly, <u>pre-built environments</u> that support those libraries' implementations in a single application. 
 
-> **Note:** If you do not want to use Anaconda, you can also use your distribution of Python 3 along with the libraries accessed by the code in this blog post. I am not going to discuss in detail how to install all of the libraries in this post, but they are all readily installable using the Package Installer for Python (pip). 
+> **Note:** If you do not want to use Anaconda, you can also use your distribution of Python 3 along with the libraries accessed by the code in this blog post. I am not going to discuss in detail how to install all of the libraries in this post, but they are all readily installable using the [Package Installer for Python (pip)](https://packaging.python.org/tutorials/installing-packages/). 
+>
+> **But Note:** There still may be *implementation* advantages for those libraries in Anaconda.
 
-To install Anaconda for free, click [the tab that says “Individual Edition”](https://www.anaconda.com/products/individual) and download the version specified for your platform. After downloading Anaconda, you should only need to walk through the installation process steps to complete the installation.
+To install Anaconda for free, click [the tab that says “Individual Edition”](https://www.anaconda.com/products/individual) and download the version specified for your platform. After downloading Anaconda, you should only need to check through the installation process steps to complete the installation.
 
 > **Note:** If you plan on using Anaconda directly from your terminal or command prompt application, then you may want to check the box that says, “Add Anaconda to PATH.” I do this and have never had to reinstall Anaconda, but you should make the decision that makes the most sense for you.
 
@@ -51,7 +57,13 @@ To install Anaconda for free, click [the tab that says “Individual Edition”]
 
 First of all, if you KNOW that you will not publicly share the code you write for this tutorial, then you can skip this step. However, I would strongly encourage you to do this, because it is good practice. It is never wise to have an API Key written directly into Python code. You may share that Python code with someone else or host it in a public location, and if it has your API key in it, the people you share it with will have access to the key. CourtListener and other API hosts rate limit these keys to prevent misuse, so it is dangerous to share your API key publicly.
 
-To prevent this, we will create a “.env” file in the directory we are working in to load the key into our file with the Python code. To do this:
+To prevent this, we will create a [“.env” file](https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa) in the directory we are working in to load the key into our file with the Python code. By loading the key from this separate file, we can share the important part of this code with another person who knows the correct values within the .env file, and they will be able to access the code.
+
+> **Note:** There are other reasons for using .env files, but this explanation will suffice for this blog post.
+
+To do this:
+
+
 
 **1.** From your application launcher, open the “Anaconda Powershell Prompt.” From the prompt, run the following code: 
 
@@ -59,15 +71,15 @@ To prevent this, we will create a “.env” file in the directory we are workin
 conda install -c conda-forge python-dotenv
 ```
 
-**2.** In the directory where you will be putting this code, create a file called “.env” and set the add the following line to the file using a text editor:
+
+
+**2.** In the directory where you will be putting this code, create a file called “.env” and add the following line to the file using a text editor:
 
 ```
 CL_API_KEY=YOUR_API_KEY
 ```
 
 Be sure to replace **“YOUR_API_KEY”** with the API key you obtained in step 1 of this blog post.
-
-
 
 ## Step 3: Requesting Federal Circuit Opinions and Save them as a CSV File
 
@@ -137,12 +149,16 @@ CAFC_OPINIONS_DATA = "cafc_opinions_data.csv"
 
 Now that we have the data in JSON format, we want to “package it up” to send to our CSV file. There are many ways to do this, but for this simple example, we will put the data into a simple Pandas DataFrame, perform some minimal preprocessing to obtain the case name, and then save some of the columns of the DataFrame to a CSV.
 
+
+
 **5a. Create the Pandas DataFrame.** Pandas is a potent data science tool for Python. It makes working with data extremely easy, and we will not go too far under the hood to see how all of these commands work. But if you find this helpful, you may want to check out [the Pandas documentation](https://pandas.pydata.org/docs/) to see how all of these commands work.
 
 ```
 # Convert the JSON results from the API request into a pandas "DataFrame"
 cafc_opinions_df = pd.DataFrame(CAFC_OPINIONS_JSON)
 ```
+
+
 
 **5b. Add the case names as a column to the Pandas DataFrame.** Surprisingly, the opinion’s request result does not return a data string for each row with the name of the case to which the opinion pertains. But we can get that value by requesting the “cluster” URL associated with each entry of the opinions data. The following code (1) creates an array to hold case names, (2) attempts to grab the case name by requesting the respective cluster, and (3) appends the resulting array as a column to the Pandas DataFrame
 
@@ -167,6 +183,10 @@ except:
 # Add the 
 cafc_opinions_df["case_name"] = case_names  
 ```
+
+#### **Note:** Since the name of the case is obviously within the text of the opinion, there are other potential ways of accessing this information that is less resource-intensive than making a request to the CourtListener server.
+
+
 
 #### **6. Create a CSV using the Data from the DataFrame.**
 
