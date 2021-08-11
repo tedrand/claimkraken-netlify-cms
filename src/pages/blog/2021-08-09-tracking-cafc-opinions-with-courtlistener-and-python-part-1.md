@@ -19,7 +19,9 @@ It may not make sense for a company to sell an application that delivers opinion
 
 So, without further ado, let’s dive in.
 
-## Step 1: Obtain a CourtListener API Key
+<br></br>
+
+# Step 1: Obtain a CourtListener API Key
 
 As noted on the [homepage of CourtListener.com](https://www.courtlistener.com/): “CourtListener is a free legal research website containing millions of legal opinions from federal and state courts.” CourtListener is sponsored by a 501(c)(3) organization called the [Free Law Project](https://free.law/). Not only is CourtListener a good resource in itself for finding legal opinions through its user interface, but it also exposes its data through an API.
 
@@ -39,9 +41,9 @@ You can find much more detail about how CourtListener stores data on its server 
 
 But readers should recognize that this is a complex service. While CourtListener does a great job as a free service, there may be discrepancies between what we receive from CourtListener and the absolute truth we seek. Particularly when data looks funky or incomplete, you may want to do some cross-comparisons. 
 
+<br></br>
 
-
-## Step 2: Install Anaconda
+# Step 2: Install Anaconda
 
 As someone who likes to control what software is on my computer, I first cringed at the thought of installing “Anaconda,” which [the website describes as a “Python distribution platform.”](https://anaconda.org/) But I’ve slowly converted, and it is now the primary way I work with Python. Essentially it is a distribution of Python 3 that comes with some popular data libraries—and, importantly, <u>pre-built environments</u> that support those libraries' implementations in a single application. 
 
@@ -63,15 +65,11 @@ To prevent this, we will create a [“.env” file](https://medium.com/chingu/an
 
 To do this:
 
-
-
 **1.** From your application launcher, open the “Anaconda Powershell Prompt.” From the prompt, run the following code: 
 
 ```
 conda install -c conda-forge python-dotenv
 ```
-
-
 
 **2.** In the directory where you will be putting this code, create a file called “.env” and add the following line to the file using a text editor:
 
@@ -81,7 +79,9 @@ CL_API_KEY=YOUR_API_KEY
 
 Be sure to replace **“YOUR_API_KEY”** with the API key you obtained in step 1 of this blog post.
 
-## Step 3: Requesting Federal Circuit Opinions and Save them as a CSV File
+<br></br>
+
+# Step 3: Requesting Federal Circuit Opinions and Save them as a CSV File
 
 Now that we have set up our environment, we can finally get to the code and get some CAFC opinions. This step will save the data in a comma-separated value (CSV) file because CSV files are versatile for storing data and are compatible with Microsoft Excel. You can execute all of the code for this step from a command prompt or terminal. But I will use a Jupyter Notebook because it has a beginner-friendly (and just friendly) interface that allows execution of a single piece of code within a larger file. In addition, when you execute code in a Jupyter Notebook, it will save the execution result for use with subsequent execution steps. So if you mess something up, you may need to restart the kernel. Here we go.
 
@@ -98,7 +98,8 @@ From the directory interface, click the button that says “New” near the uppe
 While Python is a robust interpreter with many built-in functions, you will need additional libraries for, e.g., loading the variable from your “.env” file. Place the following code into the first cell of your Jupyter Notebook, and then hit Shift+Enter to execute it.
 
 ```
-# Load the .env file to set the API Key
+# load the function load_dotenv which opens the .env file and sets
+# the contents as global variables
 from dotenv import load_dotenv
 
 # provides the ability to check for system variables set by the .env file
@@ -112,11 +113,12 @@ load_dotenv()
 Then, add this code to the next cell and execute it. 
 
 ```
-# allows us to request the data from 
+# allows us to request the data from the CourtListener API
+# via networking
 import requests
 
 # allows to recognize and load the data in the form that it is encoded: 
-#    JavaScript Object Notation (JSON)
+# JavaScript Object Notation (JSON)
 import json
 
 # allows us to work with the data in a variety of ways before sending
@@ -129,7 +131,8 @@ import pandas as pd
 Now we are going to run a simple query to collect the most recent CAFC Opinions on CourtListener. This block is the part of this code that you will most likely wish to extend, so I will create some variables that you can easily modify for other use cases. 
 
 ```
-# Setting some constants here: (1) the BASE_URL and HEADERS 
+# setting the part of the URL for accessing CourtListener that 
+# does not change for different kinds of requests
 BASE_URL = 'https://www.courtlistener.com/api/rest/v3/'
 
 # This will be appended to the BASE_URL to get the specific data for
@@ -141,15 +144,26 @@ CAFC_OPINIONS_URL_STRING = "opinions/?cluster_docket_court_id=cafc"
 # include our API key.
 HEADERS = {'Authorization': 'Token {}'.format(os.getenv("CL_API_KEY"))}
 
-# This is the file that we will be saving the data to
+# This is the file that we will be saving the data on
+# to use in, e.g., Microsoft Excel
 CAFC_OPINIONS_DATA = "cafc_opinions_data.csv"
 ```
+
+Then with the preset parameters in a separate code block that can be altered without necessarily making another request to the CourtListener API, add the code to make the request.
+
+```
+# Request the CAFC Opinion Data from CourtListener
+CAFC_OPINIONS_JSON = requests.get(
+    url     = BASE_URL + CAFC_OPINIONS_URL_STRING, 
+    headers = HEADERS
+).json()["results"]
+```
+
+> **Note:** The code here is simplified to one assignment because that seems to be the preferred method for "Pythonistas," but notice that we are grabbing the "results" variable from the larger JSON response (<u>.json()</u>), which is taken from a larger still "response."
 
 #### **5. Organize the Data as an Array of Objects.**
 
 Now that we have the data in JSON format, we want to “package it up” to send to our CSV file. There are many ways to do this, but for this simple example, we will put the data into a simple Pandas DataFrame, perform some minimal preprocessing to obtain the case name, and then save some of the columns of the DataFrame to a CSV.
-
-
 
 **5a. Create the Pandas DataFrame.** Pandas is a potent data science tool for Python. It makes working with data extremely easy, and we will not go too far under the hood to see how all of these commands work. But if you find this helpful, you may want to check out [the Pandas documentation](https://pandas.pydata.org/docs/) to see how all of these commands work.
 
@@ -157,8 +171,6 @@ Now that we have the data in JSON format, we want to “package it up” to send
 # Convert the JSON results from the API request into a pandas "DataFrame"
 cafc_opinions_df = pd.DataFrame(CAFC_OPINIONS_JSON)
 ```
-
-
 
 **5b. Add the case names as a column to the Pandas DataFrame.** Surprisingly, the opinion’s request result does not return a data string for each row with the name of the case to which the opinion pertains. But we can get that value by requesting the “cluster” URL associated with each entry of the opinions data. The following code (1) creates an array to hold case names, (2) attempts to grab the case name by requesting the respective cluster, and (3) appends the resulting array as a column to the Pandas DataFrame
 
@@ -180,13 +192,11 @@ except:
     print(value + " HAS NO CASE NAME")
     pass
 
-# Add the 
+# Add the case name to the DataFrame as an additional column
 cafc_opinions_df["case_name"] = case_names  
 ```
 
-#### **Note:** Since the name of the case is obviously within the text of the opinion, there are other potential ways of accessing this information that is less resource-intensive than making a request to the CourtListener server.
-
-
+> **Note:** Since the name of the case is obviously within the text of the opinion, there are other potential ways of accessing this information that is less resource-intensive than making a request to the CourtListener server.
 
 #### **6. Create a CSV using the Data from the DataFrame.**
 
@@ -200,6 +210,8 @@ cafc_opinions_df.to_csv(
     index=False
 )
 ```
+
+<br></br>
 
 # Conclusion
 
